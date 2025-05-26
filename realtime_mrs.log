@@ -1,0 +1,899 @@
+2025-05-26 16:58:28,771 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'run_m1_task'}
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:58:28,812 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:58:28,835 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:58:39,248 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: 2025-05-26 16:58:39.248 Python[1199:45838257] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+2025-05-26 16:58:41,696 - TaskMenu - [INFO] - User selected task number: 1
+2025-05-26 16:58:41,696 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_text', 'content': 'Launching E/I Visualization Task...\n(This task will open a new window)', 'wait_for_enter': False}
+2025-05-26 16:58:42,227 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:58:42,227 - TaskMenu - [INFO] - Preparing E/I Ratio Visualization Task
+2025-05-26 16:58:45,525 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:58:45,525 - TaskMenu - [INFO] - Starting E/I Ratio Visualization... Duration: 5 seconds
+2025-05-26 16:58:45,525 - TaskMenu - [INFO] - Starting visualizer for E/I Task...
+2025-05-26 16:58:45,531 - TaskMenu - [INFO] - Monitoring output for EIViz_pid1415...
+2025-05-26 16:58:45,531 - TaskMenu - [INFO] - Finished monitoring EIViz_pid1415.
+2025-05-26 16:58:48,531 - TaskMenu - [INFO] - Visualizer for E/I task started. Proceeding with sender...
+2025-05-26 16:58:48,531 - TaskMenu - [INFO] - Starting sender for E/I Task...
+2025-05-26 16:58:48,536 - TaskMenu - [INFO] - Monitoring output for EISender_pid1439...
+2025-05-26 16:58:48,536 - TaskMenu - [INFO] - E/I Task components (visualizer & sender) are running!
+2025-05-26 16:58:48,536 - TaskMenu - [INFO] - Finished monitoring EISender_pid1439.
+2025-05-26 16:58:48,747 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 16:58:48,747 - ei_tcp_event_listener - [INFO] - Using duration: 5 seconds
+2025-05-26 16:58:49,143 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 16:58:49,146 - sent_ei - [INFO] - Trying to connect to the visualizer at 127.0.0.1:5005
+2025-05-26 16:58:49,146 - sent_ei - [INFO] - Make sure the ei_tcp_event_listener.py is running first!
+2025-05-26 16:58:49,146 - sent_ei - [WARNING] - Connection attempt 1/10 failed: [Errno 61] Connection refused
+2025-05-26 16:58:49,146 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:58:50,293 - ei_tcp_event_listener - [INFO] - Visualization window created successfully
+2025-05-26 16:58:51,151 - sent_ei - [WARNING] - Connection attempt 2/10 failed: [Errno 61] Connection refused
+2025-05-26 16:58:51,151 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:58:53,151 - sent_ei - [WARNING] - Connection attempt 3/10 failed: [Errno 61] Connection refused
+2025-05-26 16:58:53,151 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:58:55,157 - sent_ei - [WARNING] - Connection attempt 4/10 failed: [Errno 61] Connection refused
+2025-05-26 16:58:55,158 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:58:57,164 - sent_ei - [WARNING] - Connection attempt 5/10 failed: [Errno 61] Connection refused
+2025-05-26 16:58:57,164 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:58:59,169 - sent_ei - [WARNING] - Connection attempt 6/10 failed: [Errno 61] Connection refused
+2025-05-26 16:58:59,169 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:59:01,174 - sent_ei - [WARNING] - Connection attempt 7/10 failed: [Errno 61] Connection refused
+2025-05-26 16:59:01,175 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:59:03,180 - sent_ei - [WARNING] - Connection attempt 8/10 failed: [Errno 61] Connection refused
+2025-05-26 16:59:03,180 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:59:05,185 - sent_ei - [WARNING] - Connection attempt 9/10 failed: [Errno 61] Connection refused
+2025-05-26 16:59:05,185 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:59:07,190 - sent_ei - [WARNING] - Connection attempt 10/10 failed: [Errno 61] Connection refused
+2025-05-26 16:59:07,190 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 16:59:09,193 - sent_ei - [ERROR] - Could not connect to the visualizer. Make sure ei_tcp_event_listener.py is running.
+2025-05-26 16:59:09,193 - sent_ei - [INFO] - Socket closed
+2025-05-26 16:59:09,193 - sent_ei - [INFO] - Sender terminated.
+2025-05-26 16:59:09,678 - TaskMenu - [INFO] - E/I Sender has stopped.
+2025-05-26 16:59:09,678 - TaskMenu - [INFO] - Cleaning up E/I Task processes...
+2025-05-26 16:59:09,697 - TaskMenu - [INFO] - E/I Task completed. Returning to menu...
+2025-05-26 16:59:09,697 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:09,697 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:09,725 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:09,725 - TaskMenu - [WARNING] - Invalid input. Please enter a valid number.
+2025-05-26 16:59:11,862 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'run_m1_task'}
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:11,887 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:11,910 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:12,820 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'run_m1_task'}
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:12,846 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:12,871 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:13,361 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 16:59:13,386 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:13,386 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 16:59:13,386 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 16:59:13,386 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 16:59:13,386 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'run_m1_task'}
+2025-05-26 16:59:13,386 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 16:59:13,387 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:13,387 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:13,410 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:13,971 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'run_m1_task'}
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:13,996 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Script starting (__main__).
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Attempting to setup window.
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Window setup successful.
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Window setup complete.
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Initial message shown.
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Input thread (read_commands) started.
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Input thread scheduled to start.
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_text", "content": "\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n", "wait_for_enter": true}
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,997 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "run_m1_task"}
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_text", "content": "\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n", "wait_for_enter": true}
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "run_m1_task"}
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,998 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_text", "content": "\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n", "wait_for_enter": true}
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "run_m1_task"}
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:13,999 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_text", "content": "\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n", "wait_for_enter": true}
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "run_m1_task"}
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,000 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_text", "content": "\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n", "wait_for_enter": true}
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "run_m1_task"}
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_text", "content": "\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n", "wait_for_enter": true}
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,001 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "run_m1_task"}
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_text", "content": "Launching E/I Visualization Task...\n(This task will open a new window)", "wait_for_enter": false}
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,002 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Raw command received: {"action": "show_standby"}
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: PsychoPy Display Manager: Error processing command in read_commands: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: Traceback (most recent call last):
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: File "psychopy_display_manager.py", line 199, in read_commands
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: core.callOnNextFlip(handle_command, command_data=command)
+2025-05-26 16:59:14,003 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1199: AttributeError: module 'psychopy.core' has no attribute 'callOnNextFlip'
+2025-05-26 16:59:14,019 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:14,753 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 16:59:14,776 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 16:59:14,777 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 16:59:14,777 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 16:59:14,777 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 16:59:14,777 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'run_m1_task'}
+2025-05-26 16:59:14,777 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 16:59:14,777 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:14,777 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1199): {'action': 'show_standby'}
+2025-05-26 16:59:14,799 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:00:46,770 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:00:46,771 - TaskMenu - [INFO] - Attempting to start PsychoPy Display Manager process...
+2025-05-26 17:00:46,776 - TaskMenu - [INFO] - PsychoPy Display Manager Popen called. PID: 1830
+2025-05-26 17:00:46,776 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stdout_pid1830...
+2025-05-26 17:00:46,777 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stderr_pid1830...
+2025-05-26 17:00:46,777 - TaskMenu - [INFO] - PsychoPy Display Manager monitor threads started. Waiting a moment for PDM to initialize and show first message...
+2025-05-26 17:00:48,961 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: 2025-05-26 17:00:48.960 Python[1830:45843116] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/9l/ttp02lpd0cs0csgy3_1437lc0000gp/T/org.python.python.savedState
+2025-05-26 17:00:49,777 - TaskMenu - [INFO] - PsychoPy Display Manager process appears to be running after init. Sending show_standby.
+2025-05-26 17:00:49,777 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:00:49,777 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:00:49,807 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:00:50,112 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:00:50,113 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: pygame 2.6.1 (SDL 2.28.4, Python 3.8.19)
+2025-05-26 17:00:50,113 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: Hello from the pygame community. https://www.pygame.org/contribute.html
+2025-05-26 17:00:50,113 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:00:50,112 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:00:50,668 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: 2025-05-26 17:00:50.668 Python[1830:45843116] +[IMKClient subclass]: chose IMKClient_Modern
+2025-05-26 17:00:50,714 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: 2025-05-26 17:00:50.714 Python[1830:45843116] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+2025-05-26 17:01:02,854 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'run_m1_task'}
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:01:02,882 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:01:02,904 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:01:06,635 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:01:06,636 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:06,635 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'randomize_sequence': True}
+2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:01:07,148 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'randomize_sequence': True}
+2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Randomize: True
+2025-05-26 17:01:07,148 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:01:07,148 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:01:07,148 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:07,148 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Randomize: True
+2025-05-26 17:01:07,318 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:01:07,319 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['2', '4', '1', '4', '3']
+2025-05-26 17:01:07,319 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:07,318 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:01:07,319 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:07,319 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['2', '4', '1', '4', '3']
+2025-05-26 17:01:09,350 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at -0.014s
+2025-05-26 17:01:09,350 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:09,350 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at -0.014s
+2025-05-26 17:01:09,509 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 0.176s
+2025-05-26 17:01:09,509 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:09,509 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 0.176s
+2025-05-26 17:01:09,702 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 0.369s
+2025-05-26 17:01:09,702 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:09,702 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 0.369s
+2025-05-26 17:01:11,171 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 1.837s
+2025-05-26 17:01:11,171 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:11,171 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 1.837s
+2025-05-26 17:01:11,416 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 2.083s
+2025-05-26 17:01:11,416 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:11,416 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 2.083s
+2025-05-26 17:01:13,427 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:01:13,428 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['4', '1', '3', '4', '2']
+2025-05-26 17:01:13,428 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:13,427 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:01:13,428 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:13,428 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['4', '1', '3', '4', '2']
+2025-05-26 17:01:16,853 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 1.418s
+2025-05-26 17:01:16,853 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:16,853 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 1.418s
+2025-05-26 17:01:17,057 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 1.622s
+2025-05-26 17:01:17,057 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:17,057 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 1.622s
+2025-05-26 17:01:18,647 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 3.213s
+2025-05-26 17:01:18,648 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:18,647 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 3.213s
+2025-05-26 17:01:18,891 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 3.456s
+2025-05-26 17:01:18,891 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:18,891 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 3.456s
+2025-05-26 17:01:19,093 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 3.658s
+2025-05-26 17:01:19,093 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:19,093 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 3.658s
+2025-05-26 17:01:21,157 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:01:21,157 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['4', '1', '2', '4', '3']
+2025-05-26 17:01:21,157 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:21,157 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:01:21,157 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:21,157 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['4', '1', '2', '4', '3']
+2025-05-26 17:01:26,126 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 2.963s
+2025-05-26 17:01:26,127 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:26,126 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 2.963s
+2025-05-26 17:01:26,349 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 3.186s
+2025-05-26 17:01:26,349 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:26,349 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 3.186s
+2025-05-26 17:01:26,596 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 3.433s
+2025-05-26 17:01:26,596 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:26,596 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 3.433s
+2025-05-26 17:01:26,755 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 3.592s
+2025-05-26 17:01:26,755 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:26,755 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 3.592s
+2025-05-26 17:01:26,913 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 3.749s
+2025-05-26 17:01:26,913 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:26,913 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 3.749s
+2025-05-26 17:01:28,923 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:01:28,924 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:01:28,924 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:28,923 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:01:28,924 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:28,924 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:01:29,024 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:01:29,025 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:29,024 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:01:29,025 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.
+2025-05-26 17:01:29,025 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:01:29,025 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.
+2025-05-26 17:01:37,416 - TaskMenu - [WARNING] - Invalid input. Please enter a valid number.
+2025-05-26 17:04:15,431 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 17:04:15,470 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:04:15,470 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 17:04:15,470 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 17:04:15,470 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 17:04:15,470 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'run_m1_task'}
+2025-05-26 17:04:15,470 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 17:04:15,471 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:04:15,471 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:04:15,493 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:04:33,633 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:04:33,634 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:33,633 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'randomize_sequence': True}
+2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:04:34,142 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'randomize_sequence': True}
+2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Randomize: True
+2025-05-26 17:04:34,142 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:04:34,142 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:04:34,142 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:34,142 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Randomize: True
+2025-05-26 17:04:34,200 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:04:34,201 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['2', '4', '1', '3', '4']
+2025-05-26 17:04:34,201 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:34,200 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:04:34,201 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:34,201 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['2', '4', '1', '3', '4']
+2025-05-26 17:04:37,496 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 1.287s
+2025-05-26 17:04:37,496 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:37,496 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 1.287s
+2025-05-26 17:04:37,710 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 1.501s
+2025-05-26 17:04:37,710 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:37,710 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 1.501s
+2025-05-26 17:04:39,074 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at -228.629s
+2025-05-26 17:04:39,074 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:39,074 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at -228.629s
+2025-05-26 17:04:39,390 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 3.181s
+2025-05-26 17:04:39,390 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:39,390 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 3.181s
+2025-05-26 17:04:39,839 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 3.630s
+2025-05-26 17:04:39,839 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:39,839 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 3.630s
+2025-05-26 17:04:41,857 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:04:41,857 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['2', '3', '4', '1', '4']
+2025-05-26 17:04:41,857 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:41,857 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:04:41,858 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:41,857 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['2', '3', '4', '1', '4']
+2025-05-26 17:04:44,751 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at -236.286s
+2025-05-26 17:04:44,751 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:44,751 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at -236.286s
+2025-05-26 17:04:45,000 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 1.135s
+2025-05-26 17:04:45,000 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:45,000 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 1.135s
+2025-05-26 17:04:45,496 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 1.631s
+2025-05-26 17:04:45,496 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:45,496 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 1.631s
+2025-05-26 17:04:45,772 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 1.907s
+2025-05-26 17:04:45,772 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:45,772 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 1 pressed at 1.907s
+2025-05-26 17:04:46,462 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 2.597s
+2025-05-26 17:04:46,463 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:46,462 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 2.597s
+2025-05-26 17:04:48,474 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:04:48,474 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['4', '4', '1', '2', '3']
+2025-05-26 17:04:48,474 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:48,474 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:04:48,474 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:48,474 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['4', '4', '1', '2', '3']
+2025-05-26 17:04:50,483 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at -0.323s
+2025-05-26 17:04:50,483 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:50,483 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at -0.323s
+2025-05-26 17:04:50,487 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at -0.163s
+2025-05-26 17:04:50,487 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:50,487 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at -0.163s
+2025-05-26 17:04:50,720 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 0.241s
+2025-05-26 17:04:50,720 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:50,720 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 2 pressed at 0.241s
+2025-05-26 17:04:50,896 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 0.417s
+2025-05-26 17:04:50,896 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:50,896 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 3 pressed at 0.417s
+2025-05-26 17:04:55,062 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 4.583s
+2025-05-26 17:04:55,062 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:55,062 - PsychoPyDisplayManager - [INFO] - M1 Task: Key 4 pressed at 4.583s
+2025-05-26 17:04:57,074 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:04:57,074 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:04:57,074 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:57,074 - PsychoPyDisplayManager - [ERROR] - M1 Task: Error saving data - name 'csv' is not defined
+2025-05-26 17:04:57,074 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:57,074 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:04:57,173 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:04:57,173 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:57,173 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:04:57,173 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.
+2025-05-26 17:04:57,173 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2025-05-26 17:04:57,173 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.
+2025-05-26 17:05:01,635 - TaskMenu - [INFO] - User selected task number: 1
+2025-05-26 17:05:01,635 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_text', 'content': 'Launching E/I Visualization Task...\n(This task will open a new window)', 'wait_for_enter': False}
+2025-05-26 17:05:02,172 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:05:02,172 - TaskMenu - [INFO] - Preparing E/I Ratio Visualization Task
+2025-05-26 17:05:09,636 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:05:09,636 - TaskMenu - [INFO] - Starting E/I Ratio Visualization... Duration: 10 seconds
+2025-05-26 17:05:09,636 - TaskMenu - [INFO] - Starting visualizer for E/I Task...
+2025-05-26 17:05:09,643 - TaskMenu - [INFO] - Monitoring output for EIViz_pid2606...
+2025-05-26 17:05:09,643 - TaskMenu - [INFO] - Finished monitoring EIViz_pid2606.
+2025-05-26 17:05:12,647 - TaskMenu - [INFO] - Visualizer for E/I task started. Proceeding with sender...
+2025-05-26 17:05:12,647 - TaskMenu - [INFO] - Starting sender for E/I Task...
+2025-05-26 17:05:12,653 - TaskMenu - [INFO] - Monitoring output for EISender_pid2619...
+2025-05-26 17:05:12,653 - TaskMenu - [INFO] - E/I Task components (visualizer & sender) are running!
+2025-05-26 17:05:12,653 - TaskMenu - [INFO] - Finished monitoring EISender_pid2619.
+2025-05-26 17:05:13,047 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:05:13,048 - ei_tcp_event_listener - [INFO] - Using duration: 10 seconds
+2025-05-26 17:05:13,278 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:05:13,281 - sent_ei - [INFO] - Trying to connect to the visualizer at 127.0.0.1:5005
+2025-05-26 17:05:13,281 - sent_ei - [INFO] - Make sure the ei_tcp_event_listener.py is running first!
+2025-05-26 17:05:13,281 - sent_ei - [WARNING] - Connection attempt 1/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:13,281 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:14,577 - ei_tcp_event_listener - [INFO] - Visualization window created successfully
+2025-05-26 17:05:15,286 - sent_ei - [WARNING] - Connection attempt 2/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:15,287 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:17,287 - sent_ei - [WARNING] - Connection attempt 3/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:17,288 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:19,293 - sent_ei - [WARNING] - Connection attempt 4/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:19,293 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:21,298 - sent_ei - [WARNING] - Connection attempt 5/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:21,298 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:23,304 - sent_ei - [WARNING] - Connection attempt 6/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:23,304 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:25,304 - sent_ei - [WARNING] - Connection attempt 7/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:25,304 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:27,310 - sent_ei - [WARNING] - Connection attempt 8/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:27,310 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:27,821 - ei_tcp_event_listener - [INFO] - Starting TCP server at 127.0.0.1:5005
+2025-05-26 17:05:27,821 - ei_tcp_event_listener - [INFO] - TCP server started successfully on 127.0.0.1:5005
+2025-05-26 17:05:27,821 - ei_tcp_event_listener - [INFO] - Waiting for client connection...
+2025-05-26 17:05:29,315 - sent_ei - [INFO] - Successfully connected to visualizer
+2025-05-26 17:05:29,315 - sent_ei - [INFO] - Sent: 5.708
+2025-05-26 17:05:29,316 - ei_tcp_event_listener - [INFO] - Connected by ('127.0.0.1', 49564)
+2025-05-26 17:05:30,820 - sent_ei - [INFO] - Sent: 8.298
+2025-05-26 17:05:32,326 - sent_ei - [INFO] - Sent: 8.336
+2025-05-26 17:05:33,829 - sent_ei - [INFO] - Sent: 9.195
+2025-05-26 17:05:35,329 - sent_ei - [INFO] - Sent: 5.558
+2025-05-26 17:05:36,830 - sent_ei - [INFO] - Sent: 7.2
+2025-05-26 17:05:37,862 - ei_tcp_event_listener - [INFO] - Time limit of 10 seconds reached.
+2025-05-26 17:05:37,862 - ei_tcp_event_listener - [INFO] - Shutting down...
+2025-05-26 17:05:37,862 - ei_tcp_event_listener - [INFO] - Client connection closed
+2025-05-26 17:05:37,863 - ei_tcp_event_listener - [INFO] - Server socket closed
+2025-05-26 17:05:37,874 - ei_tcp_event_listener - [INFO] - Visualization window closed
+2025-05-26 17:05:38,285 - TaskMenu - [INFO] - E/I Visualizer has stopped.
+2025-05-26 17:05:38,285 - TaskMenu - [INFO] - Cleaning up E/I Task processes...
+2025-05-26 17:05:38,289 - TaskMenu - [INFO] - E/I Task completed. Returning to menu...
+2025-05-26 17:05:38,289 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:05:38,289 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:05:38,323 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:05:38,324 - TaskMenu - [INFO] - User selected task number: 1
+2025-05-26 17:05:38,324 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_text', 'content': 'Launching E/I Visualization Task...\n(This task will open a new window)', 'wait_for_enter': False}
+2025-05-26 17:05:38,855 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:05:38,855 - TaskMenu - [INFO] - Preparing E/I Ratio Visualization Task
+2025-05-26 17:05:43,347 - TaskMenu - [WARNING] - Invalid input for run time. Please enter a valid number.
+2025-05-26 17:05:44,676 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:05:44,677 - TaskMenu - [INFO] - Starting E/I Ratio Visualization... Duration: 1 seconds
+2025-05-26 17:05:44,677 - TaskMenu - [INFO] - Starting visualizer for E/I Task...
+2025-05-26 17:05:44,682 - TaskMenu - [INFO] - Monitoring output for EIViz_pid2722...
+2025-05-26 17:05:44,682 - TaskMenu - [INFO] - Finished monitoring EIViz_pid2722.
+2025-05-26 17:05:47,670 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:05:47,671 - ei_tcp_event_listener - [INFO] - Using duration: 1 seconds
+2025-05-26 17:05:47,683 - TaskMenu - [INFO] - Visualizer for E/I task started. Proceeding with sender...
+2025-05-26 17:05:47,683 - TaskMenu - [INFO] - Starting sender for E/I Task...
+2025-05-26 17:05:47,688 - TaskMenu - [INFO] - Monitoring output for EISender_pid2744...
+2025-05-26 17:05:47,688 - TaskMenu - [INFO] - E/I Task components (visualizer & sender) are running!
+2025-05-26 17:05:47,688 - TaskMenu - [INFO] - Finished monitoring EISender_pid2744.
+2025-05-26 17:05:48,304 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:05:48,306 - sent_ei - [INFO] - Trying to connect to the visualizer at 127.0.0.1:5005
+2025-05-26 17:05:48,307 - sent_ei - [INFO] - Make sure the ei_tcp_event_listener.py is running first!
+2025-05-26 17:05:48,307 - sent_ei - [WARNING] - Connection attempt 1/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:48,307 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:49,207 - ei_tcp_event_listener - [INFO] - Visualization window created successfully
+2025-05-26 17:05:50,312 - sent_ei - [WARNING] - Connection attempt 2/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:50,313 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:52,318 - sent_ei - [WARNING] - Connection attempt 3/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:52,318 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:54,319 - sent_ei - [WARNING] - Connection attempt 4/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:54,319 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:56,320 - sent_ei - [WARNING] - Connection attempt 5/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:56,320 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:05:58,321 - sent_ei - [WARNING] - Connection attempt 6/10 failed: [Errno 61] Connection refused
+2025-05-26 17:05:58,321 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:06:00,322 - sent_ei - [WARNING] - Connection attempt 7/10 failed: [Errno 61] Connection refused
+2025-05-26 17:06:00,322 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:06:02,327 - sent_ei - [WARNING] - Connection attempt 8/10 failed: [Errno 61] Connection refused
+2025-05-26 17:06:02,328 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 17:06:02,758 - ei_tcp_event_listener - [INFO] - Starting TCP server at 127.0.0.1:5005
+2025-05-26 17:06:02,758 - ei_tcp_event_listener - [INFO] - TCP server started successfully on 127.0.0.1:5005
+2025-05-26 17:06:02,758 - ei_tcp_event_listener - [INFO] - Waiting for client connection...
+2025-05-26 17:06:03,789 - ei_tcp_event_listener - [INFO] - Time limit of 1 seconds reached.
+2025-05-26 17:06:03,789 - ei_tcp_event_listener - [INFO] - Shutting down...
+2025-05-26 17:06:03,789 - ei_tcp_event_listener - [INFO] - Server socket closed
+2025-05-26 17:06:03,802 - ei_tcp_event_listener - [INFO] - Visualization window closed
+2025-05-26 17:06:04,294 - TaskMenu - [INFO] - E/I Visualizer has stopped.
+2025-05-26 17:06:04,294 - TaskMenu - [INFO] - Cleaning up E/I Task processes...
+2025-05-26 17:06:04,298 - TaskMenu - [INFO] - E/I Task completed. Returning to menu...
+2025-05-26 17:06:04,301 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:06:04,301 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:06:04,333 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:06:04,334 - TaskMenu - [WARNING] - Invalid input. Please enter a valid number.
+2025-05-26 17:06:04,334 - TaskMenu - [WARNING] - Invalid input. Please enter a valid number.
+2025-05-26 17:06:07,119 - TaskMenu - [INFO] - User selected task number: 3
+2025-05-26 17:06:07,144 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:06:07,144 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_text', 'content': '\nWelcome to the V1 Orientation Discrimination Task!\n\nIn this task, your visual perception abilities will be tested.\nYou will be shown a series of patterns or stimuli on the screen.\nYour objective is to identify the orientation of these patterns and respond accordingly.\n\nPay close attention to the visual cues and make your responses as quickly and accurately as you can.\n', 'wait_for_enter': True}
+2025-05-26 17:06:07,144 - TaskMenu - [INFO] - Participant acknowledged instructions for V1 Orientation Task.
+2025-05-26 17:06:07,144 - TaskMenu - [INFO] - Executing command: poetry run python v1_orientation_task.py
+2025-05-26 17:06:07,151 - TaskMenu - [INFO] - Monitoring output for V1 Orientation Task...
+2025-05-26 17:06:07,151 - TaskMenu - [INFO] - Finished monitoring V1 Orientation Task.
+2025-05-26 17:06:10,061 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:06:10,063 - v1_orientation_task - [INFO] - Loaded stimulus duration from config: 0.1s
+2025-05-26 17:06:11,591 - v1_orientation_task - [INFO] - V1 Orientation Task started. Window created.
+2025-05-26 17:06:11,599 - v1_orientation_task - [INFO] - Saving data to: data/v1_orientation_test_001_2025-05-26_17h06.11.599.csv
+2025-05-26 17:06:11,599 - v1_orientation_task - [INFO] - Number of trials: 20
+2025-05-26 17:06:18,018 - v1_orientation_task - [INFO] - Trial 1: ori=5, resp=right, acc=1, rt=5.192
+2025-05-26 17:06:19,801 - v1_orientation_task - [INFO] - Trial 2: ori=5, resp=right, acc=1, rt=0.678
+2025-05-26 17:06:21,127 - v1_orientation_task - [INFO] - Trial 3: ori=-5, resp=left, acc=1, rt=0.222
+2025-05-26 17:06:22,402 - v1_orientation_task - [INFO] - Trial 4: ori=5, resp=right, acc=1, rt=0.170
+2025-05-26 17:06:23,684 - v1_orientation_task - [INFO] - Trial 5: ori=5, resp=left, acc=0, rt=0.175
+2025-05-26 17:06:25,176 - v1_orientation_task - [INFO] - Trial 6: ori=-5, resp=left, acc=1, rt=0.387
+2025-05-26 17:06:26,527 - v1_orientation_task - [INFO] - Trial 7: ori=5, resp=left, acc=0, rt=0.244
+2025-05-26 17:06:28,022 - v1_orientation_task - [INFO] - Trial 8: ori=5, resp=right, acc=1, rt=0.390
+2025-05-26 17:06:29,453 - v1_orientation_task - [INFO] - Trial 9: ori=5, resp=right, acc=1, rt=0.325
+2025-05-26 17:06:30,877 - v1_orientation_task - [INFO] - Trial 10: ori=5, resp=right, acc=1, rt=0.317
+2025-05-26 17:06:32,302 - v1_orientation_task - [INFO] - Trial 11: ori=-5, resp=left, acc=1, rt=0.321
+2025-05-26 17:06:33,957 - v1_orientation_task - [INFO] - Trial 12: ori=5, resp=right, acc=1, rt=0.550
+2025-05-26 17:06:35,388 - v1_orientation_task - [INFO] - Trial 13: ori=5, resp=left, acc=0, rt=0.325
+2025-05-26 17:06:37,002 - v1_orientation_task - [INFO] - Trial 14: ori=5, resp=right, acc=1, rt=0.507
+2025-05-26 17:06:38,661 - v1_orientation_task - [INFO] - Trial 15: ori=5, resp=right, acc=1, rt=0.555
+2025-05-26 17:06:40,210 - v1_orientation_task - [INFO] - Trial 16: ori=5, resp=right, acc=1, rt=0.445
+2025-05-26 17:06:41,555 - v1_orientation_task - [INFO] - Trial 17: ori=-5, resp=left, acc=1, rt=0.241
+2025-05-26 17:06:42,913 - v1_orientation_task - [INFO] - Trial 18: ori=-5, resp=right, acc=0, rt=0.251
+2025-05-26 17:06:44,185 - v1_orientation_task - [INFO] - Trial 19: ori=5, resp=left, acc=0, rt=0.168
+2025-05-26 17:06:45,445 - v1_orientation_task - [INFO] - Trial 20: ori=5, resp=right, acc=1, rt=0.155
+2025-05-26 17:06:45,445 - v1_orientation_task - [INFO] - V1 Orientation Task completed. Data saved.
+2025-05-26 17:06:45,798 - TaskMenu - [INFO] - V1 Orientation Task process finished with exit code 0.
+2025-05-26 17:06:45,799 - TaskMenu - [INFO] - Task "V1 Orientation Task" completed. Returning to menu in 2 seconds...
+2025-05-26 17:06:47,804 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:06:47,805 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'show_standby'}
+2025-05-26 17:06:47,830 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:07:20,246 - TaskMenu - [WARNING] - Invalid input. Please enter a valid number.
+2025-05-26 17:07:24,316 - TaskMenu - [INFO] - User selected task number: 4
+2025-05-26 17:07:24,346 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:07:24,346 - TaskMenu - [INFO] - Exiting application.
+2025-05-26 17:07:24,346 - TaskMenu - [INFO] - Attempting to stop PsychoPy Display Manager...
+2025-05-26 17:07:24,346 - TaskMenu - [INFO] - PsychoPy Display Manager (PID: 1830) is running. Sending 'exit' command.
+2025-05-26 17:07:24,346 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 1830): {'action': 'exit'}
+2025-05-26 17:07:24,346 - TaskMenu - [INFO] - Closing stdin for PsychoPy Display Manager (PID: 1830).
+2025-05-26 17:07:24,346 - TaskMenu - [INFO] - Waiting for PsychoPy Display Manager (PID: 1830) to terminate...
+2025-05-26 17:07:24,355 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Script starting (__main__).
+2025-05-26 17:07:24,355 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Attempting to setup window.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Window setup successful.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Window setup complete.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Initial message shown.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Input thread (read_commands) started.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Input thread scheduled to start.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Waiting for Enter key press...
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Enter key pressed.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Finished wait_for_enter.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: run_m1_task with data: {'action': 'run_m1_task'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': 'M1 Task Complete.', 'wait_for_enter': False}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Waiting for Enter key press...
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Enter key pressed.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Finished wait_for_enter.
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: run_m1_task with data: {'action': 'run_m1_task'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': 'M1 Task Complete.', 'wait_for_enter': False}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': 'Launching E/I Visualization Task...\n(This task will open a new window)', 'wait_for_enter': False}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': 'Launching E/I Visualization Task...\n(This task will open a new window)', 'wait_for_enter': False}
+2025-05-26 17:07:24,356 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': '\nWelcome to the V1 Orientation Discrimination Task!\n\nIn this task, your visual perception abilities will be tested.\nYou will be shown a series of patterns or stimuli on the screen.\nYour objective is to identify the orientation of these patterns and respond accordingly.\n\nPay close attention to the visual cues and make your responses as quickly and accurately as you can.\n', 'wait_for_enter': True}
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Waiting for Enter key press...
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Enter key pressed.
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Finished wait_for_enter.
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: stdin closed or keep_running became false. Exiting read_commands.
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Main loop ended (keep_running=False). Cleaning up.
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Cleanup finished. Exiting.
+2025-05-26 17:07:24,357 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid1830: PsychoPy Display Manager: Script execution finished (__main__).
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 2.5358 	WARNING 	Monitor specification not found. Creating a temporary one...
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 4.0828 	WARNING 	Couldn't measure a consistent frame rate!
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: - Is your graphics card set to sync to vertical blank?
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: - Are you running other processes on your computer?
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 4.1277 	WARNING 	t of last frame was 31.64ms (=1/31)
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 4.2629 	WARNING 	t of last frame was 28.31ms (=1/35)
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 4.3132 	WARNING 	t of last frame was 27.90ms (=1/35)
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 4.5299 	WARNING 	t of last frame was 28.25ms (=1/35)
+2025-05-26 17:07:24,360 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid1830: 4.7962 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+2025-05-26 17:07:24,551 - TaskMenu - [INFO] - Finished monitoring PsychoPyMgr_stderr_pid1830.
+2025-05-26 17:07:24,552 - TaskMenu - [INFO] - Finished monitoring PsychoPyMgr_stdout_pid1830.
+2025-05-26 17:07:24,586 - TaskMenu - [INFO] - PsychoPy Display Manager (PID: 1830) terminated with code: 0.
+2025-05-26 17:07:24,586 - TaskMenu - [INFO] - PsychoPy Display Manager process object (formerly PID: 1830) set to None.
+2025-05-26 17:07:24,587 - TaskMenu - [INFO] - Application exited normally.
+2025-05-26 17:08:28,580 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:08:28,581 - TaskMenu - [INFO] - Attempting to start PsychoPy Display Manager process...
+2025-05-26 17:08:28,585 - TaskMenu - [INFO] - PsychoPy Display Manager Popen called. PID: 3215
+2025-05-26 17:08:28,585 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stdout_pid3215...
+2025-05-26 17:08:28,585 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stderr_pid3215...
+2025-05-26 17:08:28,585 - TaskMenu - [INFO] - PsychoPy Display Manager monitor threads started. Waiting a moment for PDM to initialize and show first message...
+2025-05-26 17:08:30,961 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: 2025-05-26 17:08:30.961 Python[3215:45855236] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/9l/ttp02lpd0cs0csgy3_1437lc0000gp/T/org.python.python.savedState
+2025-05-26 17:08:31,590 - TaskMenu - [INFO] - PsychoPy Display Manager process appears to be running after init. Sending show_standby.
+2025-05-26 17:08:31,591 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3215): {'action': 'show_standby'}
+2025-05-26 17:08:31,591 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3215): {'action': 'show_standby'}
+2025-05-26 17:08:31,621 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:08:32,195 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:08:32,195 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: pygame 2.6.1 (SDL 2.28.4, Python 3.8.19)
+2025-05-26 17:08:32,195 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: Hello from the pygame community. https://www.pygame.org/contribute.html
+2025-05-26 17:08:32,195 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:32,195 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:08:32,745 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: 2025-05-26 17:08:32.745 Python[3215:45855236] +[IMKClient subclass]: chose IMKClient_Modern
+2025-05-26 17:08:32,781 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: 2025-05-26 17:08:32.781 Python[3215:45855236] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+2025-05-26 17:08:40,387 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 17:08:40,418 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:08:40,419 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3215): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 17:08:40,419 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 17:08:40,419 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 17:08:40,419 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3215): {'action': 'run_m1_task'}
+2025-05-26 17:08:40,419 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 17:08:40,419 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3215): {'action': 'show_standby'}
+2025-05-26 17:08:40,419 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3215): {'action': 'show_standby'}
+2025-05-26 17:08:40,441 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:08:44,350 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:08:44,351 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:44,350 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'randomize_sequence': True}
+2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:08:44,862 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'randomize_sequence': True}
+2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Randomize: True
+2025-05-26 17:08:44,862 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:08:44,862 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:08:44,862 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:44,862 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Randomize: True
+2025-05-26 17:08:45,031 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:08:45,031 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['2', '1', '4', '3', '4']
+2025-05-26 17:08:45,031 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:45,031 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:08:45,032 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:45,031 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['2', '1', '4', '3', '4']
+2025-05-26 17:08:47,057 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '2' at -0.072s
+2025-05-26 17:08:47,057 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:47,057 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '2' at -0.072s
+2025-05-26 17:08:47,328 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '1' at 0.282s
+2025-05-26 17:08:47,328 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:47,328 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '1' at 0.282s
+2025-05-26 17:08:47,783 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at -17.752s
+2025-05-26 17:08:47,784 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:47,783 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at -17.752s
+2025-05-26 17:08:48,832 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '3' at 1.784s
+2025-05-26 17:08:48,832 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:48,832 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '3' at 1.784s
+2025-05-26 17:08:49,044 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.998s
+2025-05-26 17:08:49,044 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:49,044 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.998s
+2025-05-26 17:08:51,205 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 1 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:08:51,205 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['1', '4', '4', '2', '3']
+2025-05-26 17:08:51,205 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:51,205 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 1 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:08:51,205 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:51,205 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['1', '4', '4', '2', '3']
+2025-05-26 17:08:54,632 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '1' at 1.418s
+2025-05-26 17:08:54,632 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:54,632 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '1' at 1.418s
+2025-05-26 17:08:54,979 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.767s
+2025-05-26 17:08:54,979 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:54,979 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.767s
+2025-05-26 17:08:55,180 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.968s
+2025-05-26 17:08:55,180 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:55,180 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.968s
+2025-05-26 17:08:56,015 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '2' at 2.801s
+2025-05-26 17:08:56,015 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:56,015 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '2' at 2.801s
+2025-05-26 17:08:56,187 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '3' at 2.975s
+2025-05-26 17:08:56,187 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:56,187 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '3' at 2.975s
+2025-05-26 17:08:58,348 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 2 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:08:58,348 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['3', '2', '4', '1', '4']
+2025-05-26 17:08:58,348 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:58,348 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 2 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:08:58,349 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:08:58,348 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['3', '2', '4', '1', '4']
+2025-05-26 17:09:00,699 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '3' at 0.342s
+2025-05-26 17:09:00,699 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:00,699 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '3' at 0.342s
+2025-05-26 17:09:00,896 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '2' at -31.061s
+2025-05-26 17:09:00,896 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:00,896 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '2' at -31.061s
+2025-05-26 17:09:02,076 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.712s
+2025-05-26 17:09:02,077 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:02,076 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 1.712s
+2025-05-26 17:09:02,325 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '1' at 1.958s
+2025-05-26 17:09:02,325 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:02,325 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '1' at 1.958s
+2025-05-26 17:09:07,743 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 7.379s
+2025-05-26 17:09:07,743 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:07,743 - PsychoPyDisplayManager - [INFO] - M1 Task: Input '4' at 7.379s
+2025-05-26 17:09:09,905 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 3 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:09:09,905 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:09:09,905 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:09,905 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 3 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:09:09,906 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:09,905 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:09:10,001 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:09:10,001 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:10,001 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:09:10,001 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.
+2025-05-26 17:09:10,001 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2025-05-26 17:09:10,001 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.
+2025-05-26 17:12:31,120 - TaskMenu - [WARNING] - Invalid choice: 24. Please enter a number between 1 and 4.
+2025-05-26 17:12:34,613 - TaskMenu - [INFO] - User selected task number: 4
+2025-05-26 17:12:34,650 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:12:34,650 - TaskMenu - [INFO] - Exiting application.
+2025-05-26 17:12:34,650 - TaskMenu - [INFO] - Attempting to stop PsychoPy Display Manager...
+2025-05-26 17:12:34,650 - TaskMenu - [INFO] - PsychoPy Display Manager (PID: 3215) is running. Sending 'exit' command.
+2025-05-26 17:12:34,650 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3215): {'action': 'exit'}
+2025-05-26 17:12:34,650 - TaskMenu - [INFO] - Closing stdin for PsychoPy Display Manager (PID: 3215).
+2025-05-26 17:12:34,650 - TaskMenu - [INFO] - Waiting for PsychoPy Display Manager (PID: 3215) to terminate...
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Script starting (__main__).
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Attempting to setup window.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Window setup successful.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Window setup complete.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Initial message shown.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Input thread (read_commands) started.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Input thread scheduled to start.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Waiting for Enter key press...
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Enter key pressed.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Finished wait_for_enter.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: run_m1_task with data: {'action': 'run_m1_task'}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': 'M1 Task Complete.', 'wait_for_enter': False}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: stdin closed or keep_running became false. Exiting read_commands.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Main loop ended (keep_running=False). Cleaning up.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Cleanup finished. Exiting.
+2025-05-26 17:12:34,656 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3215: PsychoPy Display Manager: Script execution finished (__main__).
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 2.9029 	WARNING 	Monitor specification not found. Creating a temporary one...
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 4.3485 	WARNING 	Couldn't measure a consistent frame rate!
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: - Is your graphics card set to sync to vertical blank?
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: - Are you running other processes on your computer?
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 4.3943 	WARNING 	t of last frame was 42.76ms (=1/23)
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 4.6144 	WARNING 	t of last frame was 27.80ms (=1/35)
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 5.1218 	WARNING 	t of last frame was 87.60ms (=1/11)
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 5.2312 	WARNING 	t of last frame was 28.00ms (=1/35)
+2025-05-26 17:12:34,660 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3215: 5.3310 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+2025-05-26 17:12:34,847 - TaskMenu - [INFO] - Finished monitoring PsychoPyMgr_stderr_pid3215.
+2025-05-26 17:12:34,847 - TaskMenu - [INFO] - Finished monitoring PsychoPyMgr_stdout_pid3215.
+2025-05-26 17:12:34,891 - TaskMenu - [INFO] - PsychoPy Display Manager (PID: 3215) terminated with code: 0.
+2025-05-26 17:12:34,891 - TaskMenu - [INFO] - PsychoPy Display Manager process object (formerly PID: 3215) set to None.
+2025-05-26 17:12:34,892 - TaskMenu - [INFO] - Application exited normally.
+2025-05-26 17:12:41,711 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:12:41,712 - TaskMenu - [INFO] - Attempting to start PsychoPy Display Manager process...
+2025-05-26 17:12:41,717 - TaskMenu - [INFO] - PsychoPy Display Manager Popen called. PID: 3954
+2025-05-26 17:12:41,717 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stdout_pid3954...
+2025-05-26 17:12:41,717 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stderr_pid3954...
+2025-05-26 17:12:41,717 - TaskMenu - [INFO] - PsychoPy Display Manager monitor threads started. Waiting a moment for PDM to initialize and show first message...
+2025-05-26 17:12:43,830 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3954: 2025-05-26 17:12:43.830 Python[3954:45860918] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/9l/ttp02lpd0cs0csgy3_1437lc0000gp/T/org.python.python.savedState
+2025-05-26 17:12:44,722 - TaskMenu - [INFO] - PsychoPy Display Manager process appears to be running after init. Sending show_standby.
+2025-05-26 17:12:44,723 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3954): {'action': 'show_standby'}
+2025-05-26 17:12:44,723 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3954): {'action': 'show_standby'}
+2025-05-26 17:12:44,748 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:12:44,958 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:12:44,958 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: pygame 2.6.1 (SDL 2.28.4, Python 3.8.19)
+2025-05-26 17:12:44,958 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: Hello from the pygame community. https://www.pygame.org/contribute.html
+2025-05-26 17:12:44,958 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:12:44,958 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 17:12:45,470 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3954: 2025-05-26 17:12:45.470 Python[3954:45860918] +[IMKClient subclass]: chose IMKClient_Modern
+2025-05-26 17:12:57,563 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid3954: 2025-05-26 17:12:57.563 Python[3954:45860918] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+2025-05-26 17:13:02,947 - TaskMenu - [INFO] - User selected task number: 2
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3954): {'action': 'show_text', 'content': '\nWelcome to the M1 Tapping Task!\n\nThis task is designed to measure motor cortex activity.\nYou will be presented with a sequence of cues on the screen.\nYour objective is to tap your fingers according to the cued sequence.\n\nPlease remain focused and try to follow the instructions as accurately as possible.\nThe task involves a specific number of repetitions for a set sequence.\n', 'wait_for_enter': True}
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - Participant acknowledged instructions for M1 Tapping Task.
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run M1 task...
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3954): {'action': 'run_m1_task'}
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3954): {'action': 'show_standby'}
+2025-05-26 17:13:02,976 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 3954): {'action': 'show_standby'}
+2025-05-26 17:13:02,999 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 17:13:05,353 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:13:05,353 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:05,353 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_m1_task command.
+2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'response_cutoff_time': 5, 'randomize_sequence': True}
+2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:13:05,866 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task Config loaded: {'controller_type': 'keyboard', 'joystick_device': '', 'repetitions': 3, 'base_sequence': ['4', '1', '3', '2', '4'], 'sequence_display_time': 2, 'response_cutoff_time': 5, 'randomize_sequence': True}
+2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Response Cutoff: 5s, Randomize: True
+2025-05-26 17:13:05,866 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - Starting M1 Tapping Task experiment logic.
+2025-05-26 17:13:05,866 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Controller: keyboard, Joystick: , Reps: 3
+2025-05-26 17:13:05,866 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:05,866 - PsychoPyDisplayManager - [INFO] - M1 Task Params - Base Sequence: ['4', '1', '3', '2', '4'], Display Time: 2s, Response Cutoff: 5s, Randomize: True
+2025-05-26 17:13:06,033 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:13:06,033 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['4', '3', '2', '4', '1']
+2025-05-26 17:13:06,033 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:06,033 - PsychoPyDisplayManager - [INFO] - M1 Task: Controller set to keyboard. Using keyboard input.
+2025-05-26 17:13:06,033 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:06,033 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 1/3 - Randomized Sequence: ['4', '3', '2', '4', '1']
+2025-05-26 17:13:06,039 - PsychoPyDisplayManager - [INFO] - M1 Task: Displaying sequence for 2s. Input allowed.
+2025-05-26 17:13:06,039 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:06,039 - PsychoPyDisplayManager - [INFO] - M1 Task: Displaying sequence for 2s. Input allowed.
+2025-05-26 17:13:08,043 - PsychoPyDisplayManager - [INFO] - M1 Task: Sequence display finished. Collected 0 responses so far.
+2025-05-26 17:13:08,043 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:08,043 - PsychoPyDisplayManager - [INFO] - M1 Task: Sequence display finished. Collected 0 responses so far.
+2025-05-26 17:13:08,055 - PsychoPyDisplayManager - [INFO] - M1 Task: Post-sequence response phase. Cutoff: 5s.
+2025-05-26 17:13:08,055 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:08,055 - PsychoPyDisplayManager - [INFO] - M1 Task: Post-sequence response phase. Cutoff: 5s.
+2025-05-26 17:13:09,067 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '4' at 3.025s. Response 1/5.
+2025-05-26 17:13:09,067 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:09,067 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '4' at 3.025s. Response 1/5.
+2025-05-26 17:13:09,295 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '3' at 3.255s. Response 2/5.
+2025-05-26 17:13:09,295 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:09,295 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '3' at 3.255s. Response 2/5.
+2025-05-26 17:13:10,065 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '2' at -23.562s. Response 3/5.
+2025-05-26 17:13:10,065 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:10,065 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '2' at -23.562s. Response 3/5.
+2025-05-26 17:13:10,263 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '4' at 4.222s. Response 4/5.
+2025-05-26 17:13:10,263 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:10,263 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '4' at 4.222s. Response 4/5.
+2025-05-26 17:13:10,592 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '1' at 4.539s. Response 5/5.
+2025-05-26 17:13:10,592 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:10,592 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '1' at 4.539s. Response 5/5.
+2025-05-26 17:13:10,747 - PsychoPyDisplayManager - [INFO] - M1 Task: Full sequence entered.
+2025-05-26 17:13:10,747 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:10,747 - PsychoPyDisplayManager - [INFO] - M1 Task: Full sequence entered.
+2025-05-26 17:13:12,754 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 1 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:13:12,754 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['3', '4', '1', '2', '4']
+2025-05-26 17:13:12,754 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:12,754 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 1 data saved to data/m1_finger_tapping_data.csv. Correct: True
+2025-05-26 17:13:12,754 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:12,754 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 2/3 - Randomized Sequence: ['3', '4', '1', '2', '4']
+2025-05-26 17:13:12,758 - PsychoPyDisplayManager - [INFO] - M1 Task: Displaying sequence for 2s. Input allowed.
+2025-05-26 17:13:12,758 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:12,758 - PsychoPyDisplayManager - [INFO] - M1 Task: Displaying sequence for 2s. Input allowed.
+2025-05-26 17:13:13,682 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '3' at 0.922s. Response 1/5.
+2025-05-26 17:13:13,683 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:13,682 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '3' at 0.922s. Response 1/5.
+2025-05-26 17:13:13,900 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '4' at 1.140s. Response 2/5.
+2025-05-26 17:13:13,900 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:13,900 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '4' at 1.140s. Response 2/5.
+2025-05-26 17:13:14,151 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '3' at 1.390s. Response 3/5.
+2025-05-26 17:13:14,152 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:14,151 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '3' at 1.390s. Response 3/5.
+2025-05-26 17:13:14,698 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '1' at 1.938s. Response 4/5.
+2025-05-26 17:13:14,699 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:14,698 - PsychoPyDisplayManager - [INFO] - M1 Task (During Seq Display): Input '1' at 1.938s. Response 4/5.
+2025-05-26 17:13:14,759 - PsychoPyDisplayManager - [INFO] - M1 Task: Sequence display finished. Collected 4 responses so far.
+2025-05-26 17:13:14,759 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:14,759 - PsychoPyDisplayManager - [INFO] - M1 Task: Sequence display finished. Collected 4 responses so far.
+2025-05-26 17:13:14,772 - PsychoPyDisplayManager - [INFO] - M1 Task: Post-sequence response phase. Cutoff: 5s.
+2025-05-26 17:13:14,772 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:14,772 - PsychoPyDisplayManager - [INFO] - M1 Task: Post-sequence response phase. Cutoff: 5s.
+2025-05-26 17:13:14,965 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '4' at 2.204s. Response 5/5.
+2025-05-26 17:13:14,965 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:14,965 - PsychoPyDisplayManager - [INFO] - M1 Task (Post-Seq Response): Input '4' at 2.204s. Response 5/5.
+2025-05-26 17:13:15,126 - PsychoPyDisplayManager - [INFO] - M1 Task: Full sequence entered.
+2025-05-26 17:13:15,126 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:15,126 - PsychoPyDisplayManager - [INFO] - M1 Task: Full sequence entered.
+2025-05-26 17:13:17,133 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 2 data saved to data/m1_finger_tapping_data.csv. Correct: False
+2025-05-26 17:13:17,133 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['1', '3', '4', '2', '4']
+2025-05-26 17:13:17,134 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:17,133 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 2 data saved to data/m1_finger_tapping_data.csv. Correct: False
+2025-05-26 17:13:17,134 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:17,133 - PsychoPyDisplayManager - [INFO] - M1 Task: Repetition 3/3 - Randomized Sequence: ['1', '3', '4', '2', '4']
+2025-05-26 17:13:17,138 - PsychoPyDisplayManager - [INFO] - M1 Task: Displaying sequence for 2s. Input allowed.
+2025-05-26 17:13:17,138 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:17,138 - PsychoPyDisplayManager - [INFO] - M1 Task: Displaying sequence for 2s. Input allowed.
+2025-05-26 17:13:19,143 - PsychoPyDisplayManager - [INFO] - M1 Task: Sequence display finished. Collected 0 responses so far.
+2025-05-26 17:13:19,143 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:19,143 - PsychoPyDisplayManager - [INFO] - M1 Task: Sequence display finished. Collected 0 responses so far.
+2025-05-26 17:13:19,151 - PsychoPyDisplayManager - [INFO] - M1 Task: Post-sequence response phase. Cutoff: 5s.
+2025-05-26 17:13:19,151 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:19,151 - PsychoPyDisplayManager - [INFO] - M1 Task: Post-sequence response phase. Cutoff: 5s.
+2025-05-26 17:13:24,159 - PsychoPyDisplayManager - [INFO] - M1 Task: Response cutoff time (5s) reached. 0 responses collected.
+2025-05-26 17:13:24,160 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:24,159 - PsychoPyDisplayManager - [INFO] - M1 Task: Response cutoff time (5s) reached. 0 responses collected.
+2025-05-26 17:13:26,166 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 3 data saved to data/m1_finger_tapping_data.csv. Correct: False
+2025-05-26 17:13:26,166 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:13:26,166 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:26,166 - PsychoPyDisplayManager - [INFO] - M1 Task: Rep 3 data saved to data/m1_finger_tapping_data.csv. Correct: False
+2025-05-26 17:13:26,166 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:26,166 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task completed successfully.
+2025-05-26 17:13:26,265 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:13:26,265 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:26,265 - PsychoPyDisplayManager - [INFO] - M1 Tapping Task: run_m1_experiment function finished.
+2025-05-26 17:13:26,265 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.
+2025-05-26 17:13:26,265 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid3954: 2025-05-26 17:13:26,265 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: M1 Task function finished.

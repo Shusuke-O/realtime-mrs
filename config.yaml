@@ -1,0 +1,15 @@
+network:
+  ip: 127.0.0.1
+  port: 5005
+
+m1_task:
+  controller: keyboard  # or 'bluetooth_joystick'
+  joystick_device: ""   # e.g., /dev/tty.* or leave blank for default
+  repetitions: 3
+  sequence: ['4', '1', '3', '2', '4']  # Tapping sequence
+  sequence_display_time: 1  # Time in seconds to show the sequence
+  randomize_sequence: true # true to shuffle the sequence each repetition
+  response_cutoff_time: 2 # Add this! (e.g., 5 seconds for the response phase)
+
+v1_task:
+  stimulus_duration: 0.1 # Duration in seconds for how long the grating stimulus is shown
