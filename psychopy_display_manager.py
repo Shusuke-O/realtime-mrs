@@ -18,7 +18,9 @@ from logger import get_logger # Assuming this is your central logger getter
 
 # --- Import task functions ---
 from m1_tapping_task import run_m1_experiment
-# from v1_orientation_task import run_v1_experiment # We'll add this later
+from v1_orientation_task import run_v1_experiment # Added V1 import
+from ei_display_task import run_ei_display # Added E/I display task import
+print("[PDM] ei_display_task imported.", file=sys.stderr) # DEBUG PRINT
 
 # Initialize logger for psychopy_display_manager
 logger = get_logger("PsychoPyDisplayManager") # Added logger initialization
@@ -32,10 +34,14 @@ INSTRUCTION_PROMPT = "\n\n(Press Enter to continue)"
 
 # --- Global Variables ---
 win = None
-current_stim = []
+current_stim = [] # General stimuli managed directly by PDM (text, standby)
 keep_running = True
 input_thread = None
 command_queue = queue.Queue() # Thread-safe queue for commands
+
+# Variables for managing the E/I task thread
+ei_task_thread = None
+ei_task_stop_event = None
 
 def setup_psychopy_window():
     """Initializes the PsychoPy window."""
@@ -97,7 +103,7 @@ def show_message(text_content, add_prompt=False):
 
 def handle_command(command_data):
     """Handles a command received from stdin."""
-    global keep_running, win
+    global keep_running, win, ei_task_thread, ei_task_stop_event
     if not win:
         print("PsychoPy Display Manager: handle_command called but no window.", file=sys.stderr)
         return
@@ -173,6 +179,111 @@ def handle_command(command_data):
                 # Show error on screen and then go to standby by putting commands on queue
                 command_queue.put({"action": "show_text", "content": error_message_task, "wait_for_enter": False})
                 command_queue.put({"action": "show_standby"})
+        elif action == "run_v1_task":
+            logger.info("PsychoPy Display Manager: Received run_v1_task command.")
+            try:
+                show_message("Starting V1 Orientation Task...", add_prompt=False)
+                core.wait(0.5)
+                clear_screen()
+                win.flip()
+
+                # Configuration for V1 task
+                v1_config_params = {
+                    'stimulus_duration': get_config('v1_task.stimulus_duration', 0.1),
+                    'n_trials': get_config('v1_task.n_trials', 20), # Example: make n_trials configurable
+                    'participant_id': get_config('global.participant_id', 'default_p'), # Example: get participant from global config
+                    'session_id': get_config('global.session_id', 's001'), # Example: get session from global config
+                    'response_cutoff_time': get_config('v1_task.response_cutoff_time', 3) # Default to 3s if not in config
+                }
+                logger.info(f"PsychoPy Display Manager: V1 Task Config loaded: {v1_config_params}")
+
+                run_v1_experiment(win, v1_config_params, logger) # Pass PDM's logger
+                
+                logger.info("PsychoPy Display Manager: V1 Task function finished.")
+                command_queue.put({"action": "show_text", "content": "V1 Orientation Task Complete.", "wait_for_enter": False})
+                command_queue.put({"action": "show_standby"})
+
+            except Exception as e_task:
+                error_message_task = f"Error during V1 task execution: {e_task}"
+                logger.error(f"PsychoPy Display Manager: {error_message_task}")
+                traceback.print_exc(file=sys.stderr)
+                command_queue.put({"action": "show_text", "content": error_message_task, "wait_for_enter": False})
+                command_queue.put({"action": "show_standby"})
+        elif action == "run_ei_task":
+            logger.info("PsychoPy Display Manager: Received run_ei_task command.")
+            if ei_task_thread and ei_task_thread.is_alive():
+                logger.warning("E/I task is already running. Sending stop command first.")
+                if ei_task_stop_event: ei_task_stop_event.set()
+                if ei_task_thread: ei_task_thread.join(timeout=1.5)
+                if ei_task_thread and ei_task_thread.is_alive():
+                    logger.error("Could not stop previous E/I task thread. Aborting new task run.")
+                    command_queue.put({"action": "show_text", "content": "Error: Could not stop previous E/I task.", "wait_for_enter": False})
+                    command_queue.put({"action": "show_standby"})
+                    return # Exit handler
+
+            clear_screen() # Clear any existing general PDM stimuli
+            show_message("Starting E/I Ratio Visualization Task...", add_prompt=False) # PDM shows a brief message
+            core.wait(0.5) # Let message display
+            # The run_ei_display will manage its own stimuli (circle, status text)
+            # So, we clear PDM's general stimuli before handing over.
+            clear_screen() 
+            win.flip() # Ensure screen is blank before E/I task draws its own
+
+            try:
+                ei_task_config = {
+                    'network_ip': get_config('network.ip', '127.0.0.1'),
+                    'network_port': get_config('network.port', 5005),
+                    'initial_radius_pix': get_config('ei_task.initial_radius_pix', 50),
+                    'circle_fill_color': get_config('ei_task.circle_fill_color', 'cyan'),
+                    'circle_line_color': get_config('ei_task.circle_line_color', 'white'),
+                    'data_timeout_seconds': get_config('ei_task.data_timeout_seconds', 10),
+                    'text_color': get_config('ei_task.text_color', 'white'),
+                    'text_height_pix': get_config('ei_task.text_height_pix', 20),
+                    'debug_mode': get_config('ei_task.debug_mode', False) # Load debug mode
+                }
+                logger.info(f"PsychoPy Display Manager: E/I Task Config loaded: {ei_task_config}")
+                print("[PDM] E/I Task config loaded. About to create stop_event and thread.", file=sys.stderr) # DEBUG PRINT
+
+                ei_task_stop_event = threading.Event()
+                # run_ei_display will run in its own thread, managing its own PsychoPy objects drawing loop
+                print("[PDM] About to create E/I task thread.", file=sys.stderr) # DEBUG PRINT
+                ei_task_thread = threading.Thread(target=run_ei_display, 
+                                                args=(win, ei_task_config, logger, ei_task_stop_event),
+                                                daemon=True)
+                print("[PDM] E/I task thread object created. About to start.", file=sys.stderr) # DEBUG PRINT
+                ei_task_thread.start()
+                logger.info("PsychoPy Display Manager: E/I Display task thread started.")
+                print("[PDM] E/I task thread supposedly started.", file=sys.stderr) # DEBUG PRINT
+
+            except Exception as e_task_setup:
+                error_message_task_setup = f"Error setting up E/I task: {e_task_setup}"
+                logger.error(f"PsychoPy Display Manager: {error_message_task_setup}")
+                traceback.print_exc(file=sys.stderr)
+                command_queue.put({"action": "show_text", "content": error_message_task_setup, "wait_for_enter": False})
+                command_queue.put({"action": "show_standby"})
+
+        elif action == "stop_ei_task":
+            logger.info("PsychoPy Display Manager: Received stop_ei_task command.")
+            if ei_task_thread and ei_task_thread.is_alive():
+                if ei_task_stop_event: 
+                    ei_task_stop_event.set()
+                logger.info("Waiting for E/I display task thread to finish...")
+                ei_task_thread.join(timeout=2.0) # Wait for the thread to clean up
+                if ei_task_thread.is_alive():
+                    logger.warning("E/I display task thread did not stop in time.")
+                else:
+                    logger.info("E/I display task thread finished.")
+            else:
+                logger.info("E/I display task not running or already stopped.")
+            
+            ei_task_thread = None
+            ei_task_stop_event = None
+            # After stopping, PDM should regain control of the display
+            clear_screen() # Clear any remnants from E/I task
+            command_queue.put({"action": "show_text", "content": "E/I Task Stopped.", "wait_for_enter": False}) # Short confirmation
+            core.wait(0.1) # give a tick for text to draw before standby command might clear it
+            command_queue.put({"action": "show_standby"})
+
         else:
             print(f"PsychoPy Display Manager: Unknown command: {action}", file=sys.stderr)
     except Exception as e:

@@ -267,94 +267,92 @@ class TaskMenu:
             logger.info("PsychoPy Display Manager not running or already stopped. No action taken to stop.")
 
     def run_ei_visualization(self):
-        """Run the E/I ratio visualization task."""
-        # Ensure PsychoPy manager is in standby before launching a separate task window
-        if self.psychopy_process and self.psychopy_process.poll() is None:
-            self.send_psychopy_command({"action": "show_text", "content": "Launching E/I Visualization Task...\n(This task will open a new window)", "wait_for_enter": False })
-            time.sleep(0.5) # give a moment for message to display
-
+        """Run the E/I ratio visualization task using PDM and a separate sender process."""
         intro_text = TASK_INTRODUCTIONS.get("ei_visualization", "No introduction available.")
-        # self.show_task_intro("E/I Ratio Visualization", intro_text) # This will show instructions on PDM
-        # The original EI viz does not use show_task_intro and manages its own window
-        # For now, we will just launch it as before, but ensure PDM is on standby or shows a message.
+        self.show_task_intro("E/I Ratio Visualization", intro_text)
 
-        self.display_header()
-        logger.info("Preparing E/I Ratio Visualization Task")
-        run_time = self.get_run_time()
-        self.display_header()
-        logger.info(f"Starting E/I Ratio Visualization... Duration: {'Unlimited' if run_time is None else f'{run_time} seconds'}")
-        print()
-        print("Press 'q' in the visualization window to quit and return to the menu at any time.")
-        print()
+        # Tell PDM to start the E/I display listener
+        logger.info("Sending command to PsychoPyDisplayManager to run E/I task display...")
+        self.send_psychopy_command({"action": "run_ei_task"})
         
-        visualizer_cmd = ["poetry", "run", "python", "ei_tcp_event_listener.py"]
-        if run_time is not None:
-            visualizer_cmd.append(str(run_time))
-            
-        # This task launches its own separate processes and does not use run_task_subprocess
-        # We need to be careful about PsychoPy contexts if ei_tcp_event_listener.py also uses PsychoPy
-        
-        visualizer = None
-        sender = None
+        # Allow a moment for PDM to start the E/I listener/server part
+        time.sleep(1.5) # Increased slightly to give server time to start
+
+        # Start the sent_ei.py script as a subprocess
+        sender_process = None
+        sender_monitor_thread = None
         try:
-            logger.info("Starting visualizer for E/I Task...")
-            visualizer = subprocess.Popen(
-                visualizer_cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                bufsize=1,
-                universal_newlines=True
-            )
-            threading.Thread(target=self.monitor_process, args=(visualizer, f"EIViz_pid{visualizer.pid}"), daemon=True).start()
-            
-            # Simplified wait for server logic for this example integration
-            time.sleep(3) # Assuming server starts within this time
-            logger.info("Visualizer for E/I task started. Proceeding with sender...")
-            
-            logger.info("Starting sender for E/I Task...")
-            sender = subprocess.Popen(
+            logger.info("Starting sent_ei.py subprocess...")
+            # No duration argument is passed to sent_ei.py for now.
+            # It will run until Ctrl+C or it loses connection to the listener.
+            sender_process = subprocess.Popen(
                 ["poetry", "run", "python", "sent_ei.py"],
                 stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
+                stderr=subprocess.PIPE, # Capture stderr separately
                 text=True,
                 bufsize=1,
                 universal_newlines=True
             )
-            threading.Thread(target=self.monitor_process, args=(sender, f"EISender_pid{sender.pid}"), daemon=True).start()
             
-            logger.info("E/I Task components (visualizer & sender) are running!")
+            # Monitor sender_process output
+            sender_monitor_thread_stdout = threading.Thread(
+                target=self.monitor_process, 
+                args=(sender_process, f"EISender_stdout_pid{sender_process.pid}"),
+                daemon=True
+            )
+            sender_monitor_thread_stdout.start()
+
+            sender_monitor_thread_stderr = threading.Thread(
+                target=self.monitor_process, 
+                args=(sender_process, f"EISender_stderr_pid{sender_process.pid}"),
+                daemon=True
+            )
+            sender_monitor_thread_stderr.start()
+
+            logger.info(f"sent_ei.py process started (PID: {sender_process.pid}). Waiting for it to complete...")
+            print("E/I data sender is running. Press Ctrl+C in the terminal running menu.py to stop the sender if needed, then it will tell PDM to stop the visualizer.")
             
-            try:
-                while True:
-                    if visualizer.poll() is not None:
-                        logger.info("E/I Visualizer has stopped.")
-                        if sender.poll() is None: sender.terminate()
-                        break
-                    if sender.poll() is not None:
-                        logger.info("E/I Sender has stopped.")
-                        if visualizer.poll() is None: visualizer.terminate()
-                        break
-                    time.sleep(0.5)
-            except KeyboardInterrupt:
-                logger.info("E/I Task interrupted by user. Shutting down components...")
-            
+            # Wait for the sender process to complete.
+            # This could be due to normal termination, Ctrl+C to sent_ei.py (if it handles it),
+            # or menu.py itself being Ctrl+C'd (handled by main loop's signal handler).
+            sender_process.wait() 
+            logger.info(f"sent_ei.py process finished with exit code {sender_process.returncode}.")
+
+        except KeyboardInterrupt:
+            logger.info("KeyboardInterrupt caught in run_ei_visualization. Terminating sender if running.")
+            if sender_process and sender_process.poll() is None:
+                logger.info("Terminating sent_ei.py process due to KeyboardInterrupt in menu...")
+                sender_process.terminate()
+                try:
+                    sender_process.wait(timeout=2)
+                except subprocess.TimeoutExpired:
+                    sender_process.kill()
+            # The main Ctrl+C handler for menu.py will take care of stopping PDM if necessary.
+            # Here, we mainly ensure the sender is stopped.
+
         except Exception as e:
-            logger.error(f"Error running E/I task: {e}")
+            logger.error(f"Error running E/I visualization (sent_ei.py part): {e}")
             traceback.print_exc()
+            if sender_process and sender_process.poll() is None:
+                logger.info("Terminating sent_ei.py due to an error.")
+                sender_process.terminate() # or kill
+                try:
+                    sender_process.wait(timeout=1)
+                except subprocess.TimeoutExpired:
+                    sender_process.kill()
         finally:
-            logger.info("Cleaning up E/I Task processes...")
-            if sender and sender.poll() is None:
-                try: sender.terminate(); sender.wait(timeout=1) 
-                except: pass
-                if sender.poll() is None: sender.kill()
-            if visualizer and visualizer.poll() is None:
-                try: visualizer.terminate(); visualizer.wait(timeout=1)
-                except: pass
-                if visualizer.poll() is None: visualizer.kill()
-                
-        logger.info("E/I Task completed. Returning to menu...")
-        # No sleep here, will be handled by main loop showing standby on PDM
+            if sender_monitor_thread_stdout and sender_monitor_thread_stdout.is_alive():
+                sender_monitor_thread_stdout.join(timeout=0.5)
+            if sender_monitor_thread_stderr and sender_monitor_thread_stderr.is_alive():
+                sender_monitor_thread_stderr.join(timeout=0.5)
+            logger.info("Finished waiting for/cleaning up sent_ei.py process.")
+            
+            # Always tell PDM to stop the E/I display task, whether sender finished cleanly or was interrupted
+            logger.info("Sending command to PsychoPyDisplayManager to stop E/I task display...")
+            self.send_psychopy_command({"action": "stop_ei_task"})
+
+        logger.info("E/I Ratio Visualization task sequence finished. Returning to menu...")
+        # PDM will show standby automatically after stop_ei_task completes fully.
 
     def show_task_intro(self, task_name, description=None):
         self.display_header() # Keep terminal header for experimenter
@@ -384,7 +382,15 @@ class TaskMenu:
         logger.info("M1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.")
 
     def run_v1_task(self):
-        self.run_task_subprocess("V1 Orientation Task", ["poetry", "run", "python", "v1_orientation_task.py"], "v1_task")
+        # Show instructions for V1 task via PDM
+        intro_text = TASK_INTRODUCTIONS.get("v1_task", "No introduction available for V1 task.")
+        self.show_task_intro("V1 Orientation Task", intro_text)
+
+        # Tell PDM to run the V1 task logic in its window
+        logger.info("Sending command to PsychoPyDisplayManager to run V1 task...")
+        self.send_psychopy_command({"action": "run_v1_task"})
+        
+        logger.info("V1 task execution requested from PsychoPyDisplayManager. Menu will refresh after task completion.")
         
     def exit_program(self):
         """Exit the program."""
