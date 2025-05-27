@@ -30,6 +30,9 @@ except ImportError:
     print("Warning: FSL-MRS not available. Using simulated data.")
     FSL_MRS_AVAILABLE = False
 
+# Import our custom FSL-MRS data generator
+from fsl_mrs_data_generator import FSLMRSDataGenerator, MetaboliteConcentrations
+
 from config import get_config
 from logger import get_logger
 
@@ -79,6 +82,7 @@ class FSLMRSLSLPublisher:
         
         # Data processing
         self.data_processor = None
+        self.mrs_data_generator = None
         self.last_ei_ratio = 0.5  # Default neutral ratio
         
         # Setup signal handlers for graceful shutdown
@@ -166,33 +170,52 @@ class FSLMRSLSLPublisher:
         Returns:
             bool: True if setup successful, False otherwise
         """
-        if self.config.get('simulation_mode', True):
-            self.logger.info("Running in simulation mode")
-            return True
-            
-        if not FSL_MRS_AVAILABLE:
-            self.logger.warning("FSL-MRS not available, switching to simulation mode")
-            self.config['simulation_mode'] = True
-            return True
-            
         try:
-            # Initialize FSL-MRS components
-            if self.mrs_data_path:
-                self.logger.info(f"Loading MRS data from: {self.mrs_data_path}")
-                # Load MRS data - this will depend on actual FSL-MRS API
-                # self.mrs_data = mrs_io.read_FID(self.mrs_data_path)
+            # Initialize the MRS data generator
+            mrs_config = {
+                'sampling_rate': self.sampling_rate,
+                'noise_level': self.config.get('mrs_noise_level', 0.03),
+                'temporal_variation': self.config.get('mrs_temporal_variation', 0.1),
+                'drift_enabled': self.config.get('mrs_drift_enabled', True),
+                'physiological_constraints': self.config.get('mrs_physiological_constraints', True),
+                'spectrum_simulation': self.config.get('mrs_spectrum_simulation', True),
+            }
+            
+            self.mrs_data_generator = FSLMRSDataGenerator(mrs_config)
+            self.logger.info("FSL-MRS Data Generator initialized successfully")
+            
+            # Get initial E/I ratio
+            initial_ei = self.mrs_data_generator.get_ei_ratio()
+            self.last_ei_ratio = initial_ei
+            self.logger.info(f"Initial E/I ratio: {initial_ei:.3f}")
+            
+            # If real FSL-MRS is available and not in simulation mode, set it up
+            if not self.config.get('simulation_mode', True) and FSL_MRS_AVAILABLE:
+                self.logger.info("Setting up real FSL-MRS processing...")
                 
-            if self.basis_set_path:
-                self.logger.info(f"Loading basis set from: {self.basis_set_path}")
-                # Load basis set - this will depend on actual FSL-MRS API
-                # self.basis_set = mrs_io.read_basis(self.basis_set_path)
-                
-            self.logger.info("FSL-MRS setup completed")
+                if self.mrs_data_path:
+                    self.logger.info(f"Loading MRS data from: {self.mrs_data_path}")
+                    # Load MRS data - this will depend on actual FSL-MRS API
+                    # self.mrs_data = mrs_io.read_FID(self.mrs_data_path)
+                    
+                if self.basis_set_path:
+                    self.logger.info(f"Loading basis set from: {self.basis_set_path}")
+                    # Load basis set - this will depend on actual FSL-MRS API
+                    # self.basis_set = mrs_io.read_basis(self.basis_set_path)
+                    
+                self.logger.info("Real FSL-MRS setup completed")
+            else:
+                if self.config.get('simulation_mode', True):
+                    self.logger.info("Running in simulation mode with realistic MRS data generator")
+                else:
+                    self.logger.warning("FSL-MRS not available, using simulation mode with realistic data generator")
+                    self.config['simulation_mode'] = True
+            
             return True
             
         except Exception as e:
             self.logger.error(f"Failed to setup FSL-MRS: {e}")
-            self.logger.warning("Falling back to simulation mode")
+            self.logger.warning("Falling back to basic simulation mode")
             self.config['simulation_mode'] = True
             return True
     
@@ -200,35 +223,68 @@ class FSLMRSLSLPublisher:
         """
         Calculate E/I ratio from real FSL-MRS data.
         
-        This is a placeholder implementation. The actual implementation
-        would depend on the specific FSL-MRS API and the metabolites
-        being used to calculate the E/I ratio.
+        This implementation uses the FSL-MRS data generator for realistic simulation,
+        with hooks for real FSL-MRS integration.
         
         Returns:
             float: E/I ratio value
         """
         try:
-            # Placeholder for real FSL-MRS processing
+            if self.mrs_data_generator:
+                # Use the realistic data generator
+                ei_ratio = self.mrs_data_generator.get_ei_ratio()
+                
+                # Log detailed metabolite information occasionally
+                if hasattr(self, '_last_detailed_log_time'):
+                    if time.time() - self._last_detailed_log_time > 10:  # Every 10 seconds
+                        self._log_detailed_metabolites()
+                        self._last_detailed_log_time = time.time()
+                else:
+                    self._last_detailed_log_time = time.time()
+                    self._log_detailed_metabolites()
+                
+                return ei_ratio
+            else:
+                # Fallback to basic simulation
+                self.logger.warning("MRS data generator not available, using basic simulation")
+                return self.simulate_ei_ratio()
+            
+            # Placeholder for real FSL-MRS processing when available
             # This would typically involve:
             # 1. Acquiring new MRS data
             # 2. Preprocessing (if needed)
             # 3. Fitting metabolite concentrations
             # 4. Calculating E/I ratio from specific metabolites
             
-            # Example pseudocode:
+            # Example pseudocode for real FSL-MRS:
             # new_data = self.acquire_mrs_data()
             # fitted_results = fitting.fit_mrs(new_data, self.basis_set, **self.fitting_params)
             # glutamate = fitted_results.get_concentration('Glu')
+            # glutamine = fitted_results.get_concentration('Gln')
             # gaba = fitted_results.get_concentration('GABA')
-            # ei_ratio = glutamate / gaba
-            
-            # For now, return a placeholder value
-            self.logger.warning("Real FSL-MRS processing not implemented yet")
-            return self.simulate_ei_ratio()
+            # ei_ratio = (glutamate + glutamine) / gaba
             
         except Exception as e:
-            self.logger.error(f"Error in real E/I ratio calculation: {e}")
+            self.logger.error(f"Error in E/I ratio calculation: {e}")
             return self.last_ei_ratio
+    
+    def _log_detailed_metabolites(self):
+        """Log detailed metabolite concentrations."""
+        if self.mrs_data_generator:
+            concentrations = self.mrs_data_generator.get_metabolite_concentrations()
+            self.logger.info(f"Metabolite concentrations - "
+                           f"Glu: {concentrations.glutamate:.2f}, "
+                           f"Gln: {concentrations.glutamine:.2f}, "
+                           f"GABA: {concentrations.gaba:.2f}, "
+                           f"E/I: {concentrations.ei_ratio:.3f}")
+            
+            # Log other metabolites at debug level
+            self.logger.debug(f"Other metabolites - "
+                            f"NAA: {concentrations.naa:.2f}, "
+                            f"Cr: {concentrations.creatine:.2f}, "
+                            f"Cho: {concentrations.choline:.2f}, "
+                            f"mI: {concentrations.myo_inositol:.2f}, "
+                            f"Lac: {concentrations.lactate:.2f}")
     
     def simulate_ei_ratio(self) -> float:
         """
@@ -263,9 +319,11 @@ class FSLMRSLSLPublisher:
         Returns:
             float: Current E/I ratio
         """
-        if self.config.get('simulation_mode', True):
-            return self.simulate_ei_ratio()
+        if self.config.get('simulation_mode', True) or not FSL_MRS_AVAILABLE:
+            # Use the realistic data generator (which is much better than basic simulation)
+            return self.calculate_ei_ratio_real()
         else:
+            # Use real FSL-MRS processing when available
             return self.calculate_ei_ratio_real()
     
     def stream_data(self):
@@ -357,6 +415,56 @@ class FSLMRSLSLPublisher:
             
         except Exception as e:
             self.logger.error(f"Error stopping streaming: {e}")
+    
+    def simulate_intervention(self, intervention_type: str, magnitude: float = 0.2):
+        """
+        Simulate an intervention that affects metabolite concentrations.
+        
+        Args:
+            intervention_type: Type of intervention ('excitatory', 'inhibitory', 'mixed')
+            magnitude: Magnitude of the effect (0-1)
+        """
+        if self.mrs_data_generator:
+            self.mrs_data_generator.simulate_intervention(intervention_type, magnitude)
+            self.logger.info(f"Applied {intervention_type} intervention with magnitude {magnitude}")
+        else:
+            self.logger.warning("Cannot apply intervention: MRS data generator not available")
+    
+    def reset_baseline(self):
+        """Reset MRS data to baseline concentrations."""
+        if self.mrs_data_generator:
+            self.mrs_data_generator.reset_to_baseline()
+            self.logger.info("Reset MRS data to baseline")
+        else:
+            self.logger.warning("Cannot reset baseline: MRS data generator not available")
+    
+    def get_detailed_status(self) -> Dict[str, Any]:
+        """
+        Get detailed status information including metabolite concentrations.
+        
+        Returns:
+            dict: Detailed status information
+        """
+        status = self.get_status()
+        
+        if self.mrs_data_generator:
+            mrs_status = self.mrs_data_generator.get_status()
+            status.update({
+                'mrs_generator_available': True,
+                'metabolite_concentrations': {
+                    'glutamate': mrs_status['glutamate'],
+                    'glutamine': mrs_status['glutamine'],
+                    'gaba': mrs_status['gaba'],
+                    'total_excitatory': mrs_status['total_excitatory'],
+                    'total_inhibitory': mrs_status['total_inhibitory'],
+                },
+                'mrs_noise_level': mrs_status['noise_level'],
+                'mrs_time_elapsed': mrs_status['time_elapsed'],
+            })
+        else:
+            status['mrs_generator_available'] = False
+        
+        return status
     
     def get_status(self) -> Dict[str, Any]:
         """

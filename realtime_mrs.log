@@ -5290,3 +5290,143 @@
 2025-05-26 22:02:29,133 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to stop E/I task display...
 2025-05-26 22:02:29,134 - TaskMenu - [WARNING] - PsychoPy process not ready to receive command. Details: process object is None. Command not sent: {'action': 'stop_ei_task'}
 2025-05-26 22:02:29,134 - TaskMenu - [INFO] - Application exited normally.
+2025-05-26 22:08:14,138 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:08:42,289 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:08:42,291 - FSL_MRS_DataGen - [INFO] - FSL-MRS Data Generator initialized
+2025-05-26 22:08:42,291 - FSL_MRS_DataGen - [INFO] - Baseline E/I ratio: 6.006
+2025-05-26 22:08:44,830 - FSL_MRS_DataGen - [INFO] - Simulating excitatory intervention with magnitude 0.3
+2025-05-26 22:08:44,833 - FSL_MRS_DataGen - [INFO] - New baseline E/I ratio: 7.193
+2025-05-26 22:08:54,504 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:08:54,534 - FSL_MRS_LSL_Publisher - [INFO] - LSL stream 'FSL-MRS-EI-Ratio' created successfully
+2025-05-26 22:08:54,535 - FSL_MRS_DataGen - [INFO] - FSL-MRS Data Generator initialized
+2025-05-26 22:08:54,535 - FSL_MRS_DataGen - [INFO] - Baseline E/I ratio: 5.795
+2025-05-26 22:08:54,535 - FSL_MRS_LSL_Publisher - [INFO] - FSL-MRS Data Generator initialized successfully
+2025-05-26 22:08:54,535 - FSL_MRS_LSL_Publisher - [INFO] - Initial E/I ratio: 6.107
+2025-05-26 22:08:54,535 - FSL_MRS_LSL_Publisher - [INFO] - Running in simulation mode with realistic MRS data generator
+2025-05-26 22:08:54,536 - FSL_MRS_LSL_Publisher - [INFO] - Starting E/I ratio streaming...
+2025-05-26 22:08:54,536 - FSL_MRS_LSL_Publisher - [INFO] - E/I ratio streaming started successfully
+2025-05-26 22:08:54,536 - FSL_MRS_LSL_Publisher - [INFO] - Publisher started. Press Ctrl+C to stop.
+2025-05-26 22:08:54,537 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 10.78, Gln: 4.18, GABA: 2.43, E/I: 6.149
+2025-05-26 22:08:55,541 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.906
+2025-05-26 22:08:56,547 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.337
+2025-05-26 22:08:57,553 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.911
+2025-05-26 22:08:58,558 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.182
+2025-05-26 22:08:59,564 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.594
+2025-05-26 22:09:00,570 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.793
+2025-05-26 22:09:01,575 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.169
+2025-05-26 22:09:02,581 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.799
+2025-05-26 22:09:03,587 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.909
+2025-05-26 22:09:04,542 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 10.17, Gln: 4.33, GABA: 2.36, E/I: 6.148
+2025-05-26 22:09:04,592 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.193
+2025-05-26 22:09:05,598 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.718
+2025-05-26 22:09:06,600 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.895
+2025-05-26 22:09:07,607 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.738
+2025-05-26 22:09:08,612 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.585
+2025-05-26 22:09:09,618 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.055
+2025-05-26 22:09:10,624 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.597
+2025-05-26 22:09:11,630 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.454
+2025-05-26 22:09:12,636 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.521
+2025-05-26 22:09:13,637 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.974
+2025-05-26 22:09:14,641 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.861
+2025-05-26 22:09:15,539 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 9.72, Gln: 4.26, GABA: 2.44, E/I: 5.734
+2025-05-26 22:09:15,646 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.645
+2025-05-26 22:09:16,651 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.535
+2025-05-26 22:09:17,657 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.520
+2025-05-26 22:09:18,662 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.394
+2025-05-26 22:09:19,668 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.644
+2025-05-26 22:09:20,671 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.487
+2025-05-26 22:09:21,677 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.505
+2025-05-26 22:09:22,683 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.490
+2025-05-26 22:09:23,688 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.372
+2025-05-26 22:09:24,694 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.811
+2025-05-26 22:09:25,699 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.566
+2025-05-26 22:09:26,541 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 9.25, Gln: 4.10, GABA: 2.51, E/I: 5.307
+2025-05-26 22:09:26,705 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.371
+2025-05-26 22:09:27,710 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.371
+2025-05-26 22:09:28,715 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.124
+2025-05-26 22:09:29,721 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.017
+2025-05-26 22:09:30,727 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.399
+2025-05-26 22:09:31,733 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.233
+2025-05-26 22:09:32,735 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.536
+2025-05-26 22:09:33,741 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.288
+2025-05-26 22:09:34,747 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.338
+2025-05-26 22:09:35,753 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.586
+2025-05-26 22:09:36,759 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.101
+2025-05-26 22:09:37,540 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.86, Gln: 3.97, GABA: 2.45, E/I: 5.235
+2025-05-26 22:09:37,764 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.316
+2025-05-26 22:09:38,770 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.017
+2025-05-26 22:09:39,772 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.473
+2025-05-26 22:09:40,778 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.064
+2025-05-26 22:09:41,780 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.173
+2025-05-26 22:09:42,786 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.992
+2025-05-26 22:09:43,788 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.371
+2025-05-26 22:09:44,793 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.255
+2025-05-26 22:09:45,799 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.111
+2025-05-26 22:09:46,799 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.179
+2025-05-26 22:09:47,805 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.247
+2025-05-26 22:09:48,542 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.90, Gln: 3.85, GABA: 2.39, E/I: 5.327
+2025-05-26 22:09:48,806 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.866
+2025-05-26 22:09:49,812 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.500
+2025-05-26 22:09:50,818 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.847
+2025-05-26 22:09:51,820 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.023
+2025-05-26 22:09:52,826 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.391
+2025-05-26 22:09:53,829 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.172
+2025-05-26 22:09:54,833 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.212
+2025-05-26 22:09:55,838 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.273
+2025-05-26 22:09:56,844 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.781
+2025-05-26 22:09:57,850 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.278
+2025-05-26 22:09:58,855 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.961
+2025-05-26 22:09:59,543 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.49, Gln: 4.06, GABA: 2.53, E/I: 4.954
+2025-05-26 22:09:59,860 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.404
+2025-05-26 22:10:00,866 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.037
+2025-05-26 22:10:01,872 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.881
+2025-05-26 22:10:02,878 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.365
+2025-05-26 22:10:03,882 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.935
+2025-05-26 22:10:04,887 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.015
+2025-05-26 22:10:05,893 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.966
+2025-05-26 22:10:06,899 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=4.718
+2025-05-26 22:10:07,110 - FSL_MRS_LSL_Publisher - [INFO] - Received signal 2, shutting down...
+2025-05-26 22:10:07,111 - FSL_MRS_LSL_Publisher - [INFO] - Stopping E/I ratio streaming...
+2025-05-26 22:10:07,147 - FSL_MRS_LSL_Publisher - [INFO] - E/I ratio streaming stopped
+2025-05-26 22:10:36,018 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:10:36,736 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:10:36,764 - FSL_MRS_LSL_Publisher - [INFO] - LSL stream 'FSL-MRS-EI-Ratio' created successfully
+2025-05-26 22:10:36,765 - FSL_MRS_DataGen - [INFO] - FSL-MRS Data Generator initialized
+2025-05-26 22:10:36,765 - FSL_MRS_DataGen - [INFO] - Baseline E/I ratio: 5.130
+2025-05-26 22:10:36,765 - FSL_MRS_LSL_Publisher - [INFO] - FSL-MRS Data Generator initialized successfully
+2025-05-26 22:10:36,766 - FSL_MRS_LSL_Publisher - [INFO] - Initial E/I ratio: 5.097
+2025-05-26 22:10:36,766 - FSL_MRS_LSL_Publisher - [INFO] - Running in simulation mode with realistic MRS data generator
+2025-05-26 22:10:36,766 - FSL_MRS_LSL_Publisher - [INFO] - Starting E/I ratio streaming...
+2025-05-26 22:10:36,766 - FSL_MRS_LSL_Publisher - [INFO] - E/I ratio streaming started successfully
+2025-05-26 22:10:36,767 - FSL_MRS_LSL_Publisher - [INFO] - Publisher started. Press Ctrl+C to stop.
+2025-05-26 22:10:36,767 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 9.12, Gln: 4.98, GABA: 2.69, E/I: 5.245
+2025-05-26 22:10:37,772 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.013
+2025-05-26 22:10:38,777 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.303
+2025-05-26 22:10:39,640 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:10:39,643 - LSL_EI_Receiver - [INFO] - Starting E/I ratio reception...
+2025-05-26 22:10:39,643 - LSL_EI_Receiver - [INFO] - E/I ratio reception started successfully
+2025-05-26 22:10:39,643 - LSL_EI_Receiver - [INFO] - Looking for LSL streams...
+2025-05-26 22:10:39,643 - LSL_EI_Receiver - [INFO] - Receiver started. Press Ctrl+C to stop.
+2025-05-26 22:10:39,643 - LSL_EI_Receiver - [INFO] - Searching for streams with criteria: name='FSL-MRS-EI-Ratio' and type='EI_Ratio'
+2025-05-26 22:10:39,678 - LSL_EI_Receiver - [INFO] - Found 1 matching stream(s)
+2025-05-26 22:10:39,678 - LSL_EI_Receiver - [INFO] - Stream 1: name='FSL-MRS-EI-Ratio', type='EI_Ratio', source_id='fsl-mrs-ei-001', channels=1, rate=1.0Hz
+2025-05-26 22:10:39,678 - LSL_EI_Receiver - [INFO] - Connecting to stream: FSL-MRS-EI-Ratio
+2025-05-26 22:10:39,783 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.432
+2025-05-26 22:10:39,824 - LSL_EI_Receiver - [INFO] - Successfully connected to LSL stream 'FSL-MRS-EI-Ratio'
+2025-05-26 22:10:40,771 - LSL_EI_Receiver - [INFO] - Attempting to connect to visualization at 127.0.0.1:5005
+2025-05-26 22:10:40,773 - LSL_EI_Receiver - [WARNING] - Could not connect to visualization: [Errno 61] Connection refused
+2025-05-26 22:10:40,788 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.203
+2025-05-26 22:10:41,793 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.146
+2025-05-26 22:10:42,799 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.307
+2025-05-26 22:10:43,801 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.375
+2025-05-26 22:10:44,312 - FSL_MRS_LSL_Publisher - [INFO] - Received signal 2, shutting down...
+2025-05-26 22:10:44,312 - LSL_EI_Receiver - [INFO] - Received signal 2, shutting down...
+2025-05-26 22:10:44,312 - FSL_MRS_LSL_Publisher - [INFO] - Stopping E/I ratio streaming...
+2025-05-26 22:10:44,312 - LSL_EI_Receiver - [INFO] - Stopping E/I ratio reception...
+2025-05-26 22:10:44,313 - FSL_MRS_LSL_Publisher - [INFO] - Received signal 15, shutting down...
+2025-05-26 22:10:44,314 - FSL_MRS_LSL_Publisher - [INFO] - Stopping E/I ratio streaming...
+2025-05-26 22:10:44,346 - FSL_MRS_LSL_Publisher - [INFO] - E/I ratio streaming stopped
+2025-05-26 22:10:44,824 - LSL_EI_Receiver - [INFO] - Received signal 15, shutting down...
+2025-05-26 22:10:44,824 - LSL_EI_Receiver - [INFO] - Stopping E/I ratio reception...
+2025-05-26 22:10:44,824 - LSL_EI_Receiver - [INFO] - E/I ratio reception stopped
+2025-05-26 22:10:44,826 - LSL_EI_Receiver - [INFO] - E/I ratio reception stopped
