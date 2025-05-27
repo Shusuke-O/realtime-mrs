@@ -70,3 +70,41 @@ lsl_ei_receiver:
   stream_resolve_timeout: 5.0  # seconds
   buffer_length: 360  # seconds
   max_chunk_length: 0  # 0 = no chunking
+
+# Experiment Recording Configuration
+experiment_recording:
+  data_directory: 'experiment_data'
+  auto_save_interval: 30.0  # seconds
+  streams_to_record:
+    - 'FSL-MRS-EI-Ratio'
+    - 'ExperimentEvents'
+    - 'M1-Tapping-Task'
+    - 'V1-Orientation-Task'
+    - 'Physiological-Data'
+  file_formats: ['csv', 'json']
+  buffer_length: 360  # seconds
+  sync_tolerance: 0.001  # seconds
+
+# Task LSL Publishers Configuration
+task_lsl_publishers:
+  m1_tapping:
+    stream_name: 'M1-Tapping-Task'
+    stream_type: 'TaskData'
+    source_id: 'm1-tapping-001'
+  
+  v1_orientation:
+    stream_name: 'V1-Orientation-Task'
+    stream_type: 'TaskData'
+    source_id: 'v1-orientation-001'
+  
+  physiological:
+    stream_name: 'Physiological-Data'
+    stream_type: 'Physiological'
+    source_id: 'physio-001'
+    sampling_rate: 100.0  # Hz
+    channels:
+      - 'heart_rate'
+      - 'eye_x'
+      - 'eye_y'
+      - 'pupil_diameter'
+      - 'blink'

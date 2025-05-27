@@ -5430,3 +5430,287 @@
 2025-05-26 22:10:44,824 - LSL_EI_Receiver - [INFO] - Stopping E/I ratio reception...
 2025-05-26 22:10:44,824 - LSL_EI_Receiver - [INFO] - E/I ratio reception stopped
 2025-05-26 22:10:44,826 - LSL_EI_Receiver - [INFO] - E/I ratio reception stopped
+2025-05-26 22:20:18,643 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:20:53,512 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:20:53,521 - ExperimentDataRecorder - [INFO] - Experiment Data Recorder initialized
+2025-05-26 22:20:53,526 - ExperimentDataRecorder - [INFO] - LSL event stream created successfully
+2025-05-26 22:20:53,526 - ExperimentDataRecorder - [INFO] - Started experiment session: test_participant/test_session_001
+2025-05-26 22:20:53,526 - ExperimentDataRecorder - [INFO] - Data directory: experiment_data/test_participant_test_session_001_20250526_222053
+2025-05-26 22:20:53,526 - ExperimentDataRecorder - [INFO] - Discovering LSL streams...
+2025-05-26 22:20:53,526 - ExperimentDataRecorder - [ERROR] - Error discovering streams: resolve_stream() got an unexpected keyword argument 'timeout'
+2025-05-26 22:20:53,526 - ExperimentDataRecorder - [WARNING] - No LSL streams found to record
+2025-05-26 22:20:53,527 - ExperimentDataRecorder - [INFO] - Saved session data to: experiment_data/test_participant_test_session_001_20250526_222053
+2025-05-26 22:20:53,527 - ExperimentDataRecorder - [INFO] - Ended experiment session: test_participant/test_session_001
+2025-05-26 22:21:53,287 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:21:53,297 - ExperimentDataRecorder - [INFO] - Experiment Data Recorder initialized
+2025-05-26 22:21:53,301 - ExperimentDataRecorder - [INFO] - LSL event stream created successfully
+2025-05-26 22:21:53,301 - ExperimentDataRecorder - [INFO] - Started experiment session: test_participant/test_session_001
+2025-05-26 22:21:53,301 - ExperimentDataRecorder - [INFO] - Data directory: experiment_data/test_participant_test_session_001_20250526_222153
+2025-05-26 22:21:53,302 - ExperimentDataRecorder - [INFO] - Discovering LSL streams...
+2025-05-26 22:21:53,302 - ExperimentDataRecorder - [ERROR] - Error discovering streams: resolve_stream() got an unexpected keyword argument 'timeout'
+2025-05-26 22:21:53,302 - ExperimentDataRecorder - [WARNING] - No LSL streams found to record
+2025-05-26 22:21:53,302 - ExperimentDataRecorder - [INFO] - Saved session data to: experiment_data/test_participant_test_session_001_20250526_222153
+2025-05-26 22:21:53,302 - ExperimentDataRecorder - [INFO] - Ended experiment session: test_participant/test_session_001
+2025-05-26 22:23:06,873 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:23:06,884 - ExperimentDataRecorder - [INFO] - Experiment Data Recorder initialized
+2025-05-26 22:23:06,889 - ExperimentDataRecorder - [INFO] - LSL event stream created successfully
+2025-05-26 22:23:06,889 - ExperimentDataRecorder - [INFO] - Started experiment session: test_participant/test_session_001
+2025-05-26 22:23:06,889 - ExperimentDataRecorder - [INFO] - Data directory: experiment_data/test_participant_test_session_001_20250526_222306
+2025-05-26 22:23:06,889 - ExperimentDataRecorder - [INFO] - Discovering LSL streams...
+2025-05-26 22:23:07,891 - ExperimentDataRecorder - [INFO] - Found stream to record: ExperimentEvents (type: Events, channels: 1)
+2025-05-26 22:23:07,892 - ExperimentDataRecorder - [INFO] - Started recording thread for stream: ExperimentEvents
+2025-05-26 22:23:07,892 - ExperimentDataRecorder - [INFO] - Started recording 1 streams
+2025-05-26 22:23:12,908 - ExperimentDataRecorder - [INFO] - Stopping data recording...
+2025-05-26 22:23:12,920 - ExperimentDataRecorder - [INFO] - Stopped recording stream: ExperimentEvents
+2025-05-26 22:23:12,921 - ExperimentDataRecorder - [INFO] - Data recording stopped
+2025-05-26 22:23:13,431 - ExperimentDataRecorder - [INFO] - Saved session data to: experiment_data/test_participant_test_session_001_20250526_222306
+2025-05-26 22:23:13,432 - ExperimentDataRecorder - [INFO] - Ended experiment session: test_participant/test_session_001
+2025-05-26 22:24:09,030 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:24:09,036 - TaskLSLPublishers - [INFO] - M1 tapping LSL stream 'M1-Tapping-Task' created successfully
+2025-05-26 22:24:09,564 - TaskLSLPublishers - [INFO] - V1 orientation LSL stream 'V1-Orientation-Task' created successfully
+2025-05-26 22:24:09,989 - TaskLSLPublishers - [INFO] - Physiological LSL stream 'Physiological-Data' created successfully
+2025-05-26 22:24:10,083 - TaskLSLPublishers - [INFO] - M1 tapping LSL stream closed
+2025-05-26 22:24:10,114 - TaskLSLPublishers - [INFO] - V1 orientation LSL stream closed
+2025-05-26 22:24:10,140 - TaskLSLPublishers - [INFO] - Physiological LSL stream closed
+2025-05-26 22:25:50,149 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:25:50,150 - DataAnalysis - [INFO] - Initialized data analyzer for: experiment_data/test_participant_test_session_001_20250526_222306/
+2025-05-26 22:25:50,150 - DataAnalysis - [INFO] - Starting complete analysis pipeline...
+2025-05-26 22:25:50,151 - DataAnalysis - [INFO] - Loaded session info: test_participant/test_session_001
+2025-05-26 22:25:50,164 - DataAnalysis - [INFO] - Loaded 7 events
+2025-05-26 22:25:50,165 - DataAnalysis - [WARNING] - No MRS data available for analysis
+2025-05-26 22:25:50,165 - DataAnalysis - [INFO] - Completed task performance analysis
+2025-05-26 22:25:51,783 - DataAnalysis - [INFO] - Generated visualizations in: experiment_data/test_participant_test_session_001_20250526_222306/analysis_plots
+2025-05-26 22:25:51,784 - DataAnalysis - [INFO] - Generated analysis report: experiment_data/test_participant_test_session_001_20250526_222306/analysis_report.json
+2025-05-26 22:25:51,784 - DataAnalysis - [INFO] - Complete analysis pipeline finished successfully
+2025-05-26 22:26:14,927 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:26:14,955 - FSL_MRS_LSL_Publisher - [INFO] - LSL stream 'FSL-MRS-EI-Ratio' created successfully
+2025-05-26 22:26:14,956 - FSL_MRS_DataGen - [INFO] - FSL-MRS Data Generator initialized
+2025-05-26 22:26:14,956 - FSL_MRS_DataGen - [INFO] - Baseline E/I ratio: 5.716
+2025-05-26 22:26:14,957 - FSL_MRS_LSL_Publisher - [INFO] - FSL-MRS Data Generator initialized successfully
+2025-05-26 22:26:14,957 - FSL_MRS_LSL_Publisher - [INFO] - Initial E/I ratio: 6.164
+2025-05-26 22:26:14,957 - FSL_MRS_LSL_Publisher - [WARNING] - FSL-MRS not available, using simulation mode with realistic data generator
+2025-05-26 22:26:14,958 - FSL_MRS_LSL_Publisher - [INFO] - Starting E/I ratio streaming...
+2025-05-26 22:26:14,958 - FSL_MRS_LSL_Publisher - [INFO] - E/I ratio streaming started successfully
+2025-05-26 22:26:14,958 - FSL_MRS_LSL_Publisher - [INFO] - Publisher started. Press Ctrl+C to stop.
+2025-05-26 22:26:14,959 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 9.21, Gln: 4.46, GABA: 2.14, E/I: 6.398
+2025-05-26 22:26:15,963 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.002
+2025-05-26 22:26:16,969 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.747
+2025-05-26 22:26:17,974 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.757
+2025-05-26 22:26:18,980 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.147
+2025-05-26 22:26:19,984 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.891
+2025-05-26 22:26:20,990 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.915
+2025-05-26 22:26:21,996 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.197
+2025-05-26 22:26:22,998 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.082
+2025-05-26 22:26:24,002 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.867
+2025-05-26 22:26:24,963 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.76, Gln: 4.38, GABA: 2.18, E/I: 6.034
+2025-05-26 22:26:25,005 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.001
+2025-05-26 22:26:26,010 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.230
+2025-05-26 22:26:27,013 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.452
+2025-05-26 22:26:28,016 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.306
+2025-05-26 22:26:29,022 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.737
+2025-05-26 22:26:30,028 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.927
+2025-05-26 22:26:31,033 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.656
+2025-05-26 22:26:32,040 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.323
+2025-05-26 22:26:33,045 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.052
+2025-05-26 22:26:34,049 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.897
+2025-05-26 22:26:35,054 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.325
+2025-05-26 22:26:35,963 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 9.31, Gln: 4.41, GABA: 2.24, E/I: 6.125
+2025-05-26 22:26:36,060 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.719
+2025-05-26 22:26:37,063 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.385
+2025-05-26 22:26:38,066 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.412
+2025-05-26 22:26:39,069 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.000
+2025-05-26 22:26:40,074 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.673
+2025-05-26 22:26:41,080 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.251
+2025-05-26 22:26:42,083 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.881
+2025-05-26 22:26:43,085 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.647
+2025-05-26 22:26:44,090 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.277
+2025-05-26 22:26:45,096 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.536
+2025-05-26 22:26:46,102 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.420
+2025-05-26 22:26:46,962 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 9.17, Gln: 4.51, GABA: 2.14, E/I: 6.397
+2025-05-26 22:26:47,107 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.372
+2025-05-26 22:26:48,113 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.252
+2025-05-26 22:26:49,117 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.616
+2025-05-26 22:26:50,123 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.079
+2025-05-26 22:26:51,129 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.270
+2025-05-26 22:26:52,133 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.252
+2025-05-26 22:26:53,139 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.787
+2025-05-26 22:26:54,144 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.074
+2025-05-26 22:26:55,150 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.360
+2025-05-26 22:26:56,155 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.831
+2025-05-26 22:26:57,160 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.221
+2025-05-26 22:26:57,961 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.69, Gln: 4.57, GABA: 2.29, E/I: 5.784
+2025-05-26 22:26:58,165 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.390
+2025-05-26 22:26:59,171 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.332
+2025-05-26 22:27:00,176 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.184
+2025-05-26 22:27:01,181 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.374
+2025-05-26 22:27:02,187 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.421
+2025-05-26 22:27:03,192 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.097
+2025-05-26 22:27:04,194 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.019
+2025-05-26 22:27:05,200 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.941
+2025-05-26 22:27:06,205 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.185
+2025-05-26 22:27:07,211 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.356
+2025-05-26 22:27:08,216 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.548
+2025-05-26 22:27:08,960 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 9.11, Gln: 4.61, GABA: 2.12, E/I: 6.463
+2025-05-26 22:27:09,217 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.473
+2025-05-26 22:27:10,218 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.902
+2025-05-26 22:27:10,971 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:27:11,223 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.802
+2025-05-26 22:27:11,320 - numexpr.utils - [INFO] - NumExpr defaulting to 8 threads.
+2025-05-26 22:27:12,229 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.704
+2025-05-26 22:27:12,456 - ExperimentDataRecorder - [INFO] - Experiment Data Recorder initialized
+2025-05-26 22:27:12,459 - TaskLSLPublishers - [INFO] - M1 tapping LSL stream 'M1-Tapping-Task' created successfully
+2025-05-26 22:27:12,460 - TaskLSLPublishers - [INFO] - V1 orientation LSL stream 'V1-Orientation-Task' created successfully
+2025-05-26 22:27:12,461 - TaskLSLPublishers - [INFO] - Physiological LSL stream 'Physiological-Data' created successfully
+2025-05-26 22:27:12,465 - ExperimentDataRecorder - [INFO] - LSL event stream created successfully
+2025-05-26 22:27:12,466 - ExperimentDataRecorder - [INFO] - Started experiment session: TEST_P001/comprehensive_test
+2025-05-26 22:27:12,466 - ExperimentDataRecorder - [INFO] - Data directory: experiment_data/TEST_P001_comprehensive_test_20250526_222712
+2025-05-26 22:27:12,467 - ExperimentDataRecorder - [INFO] - Discovering LSL streams...
+2025-05-26 22:27:13,234 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.328
+2025-05-26 22:27:13,469 - ExperimentDataRecorder - [INFO] - Found stream to record: V1-Orientation-Task (type: TaskData, channels: 1)
+2025-05-26 22:27:13,469 - ExperimentDataRecorder - [INFO] - Found stream to record: ExperimentEvents (type: Events, channels: 1)
+2025-05-26 22:27:13,469 - ExperimentDataRecorder - [INFO] - Found stream to record: Physiological-Data (type: Physiological, channels: 5)
+2025-05-26 22:27:13,469 - ExperimentDataRecorder - [INFO] - Found stream to record: M1-Tapping-Task (type: TaskData, channels: 1)
+2025-05-26 22:27:13,469 - ExperimentDataRecorder - [INFO] - Found stream to record: FSL-MRS-EI-Ratio (type: EI_Ratio, channels: 1)
+2025-05-26 22:27:13,475 - ExperimentDataRecorder - [INFO] - Started recording thread for stream: V1-Orientation-Task
+2025-05-26 22:27:13,476 - ExperimentDataRecorder - [INFO] - Started recording thread for stream: ExperimentEvents
+2025-05-26 22:27:13,478 - ExperimentDataRecorder - [INFO] - Started recording thread for stream: Physiological-Data
+2025-05-26 22:27:13,479 - ExperimentDataRecorder - [INFO] - Started recording thread for stream: M1-Tapping-Task
+2025-05-26 22:27:13,479 - ExperimentDataRecorder - [INFO] - Started recording thread for stream: FSL-MRS-EI-Ratio
+2025-05-26 22:27:13,480 - ExperimentDataRecorder - [INFO] - Started recording 5 streams
+2025-05-26 22:27:14,239 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.566
+2025-05-26 22:27:15,245 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.584
+2025-05-26 22:27:16,248 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.641
+2025-05-26 22:27:17,253 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.340
+2025-05-26 22:27:18,259 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.606
+2025-05-26 22:27:19,264 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.351
+2025-05-26 22:27:19,959 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.71, Gln: 4.62, GABA: 2.03, E/I: 6.580
+2025-05-26 22:27:20,266 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.292
+2025-05-26 22:27:21,267 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.532
+2025-05-26 22:27:22,272 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.221
+2025-05-26 22:27:23,278 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.665
+2025-05-26 22:27:23,440 - ExperimentDataRecorder - [INFO] - Stopping data recording...
+2025-05-26 22:27:23,517 - ExperimentDataRecorder - [INFO] - Stopped recording stream: FSL-MRS-EI-Ratio
+2025-05-26 22:27:24,283 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.317
+2025-05-26 22:27:25,287 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.483
+2025-05-26 22:27:25,445 - ExperimentDataRecorder - [WARNING] - Recording thread for V1-Orientation-Task did not stop gracefully
+2025-05-26 22:27:26,288 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.222
+2025-05-26 22:27:27,293 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.040
+2025-05-26 22:27:27,451 - ExperimentDataRecorder - [WARNING] - Recording thread for ExperimentEvents did not stop gracefully
+2025-05-26 22:27:28,298 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.442
+2025-05-26 22:27:29,299 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.464
+2025-05-26 22:27:29,456 - ExperimentDataRecorder - [WARNING] - Recording thread for Physiological-Data did not stop gracefully
+2025-05-26 22:27:29,961 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.35, Gln: 4.85, GABA: 2.08, E/I: 6.337
+2025-05-26 22:27:30,300 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.019
+2025-05-26 22:27:31,305 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.281
+2025-05-26 22:27:31,461 - ExperimentDataRecorder - [WARNING] - Recording thread for M1-Tapping-Task did not stop gracefully
+2025-05-26 22:27:31,462 - ExperimentDataRecorder - [INFO] - Data recording stopped
+2025-05-26 22:27:31,971 - ExperimentDataRecorder - [INFO] - Saved session data to: experiment_data/TEST_P001_comprehensive_test_20250526_222712
+2025-05-26 22:27:31,971 - ExperimentDataRecorder - [INFO] - Ended experiment session: TEST_P001/comprehensive_test
+2025-05-26 22:27:32,000 - DataAnalysis - [INFO] - Initialized data analyzer for: experiment_data/TEST_P001_comprehensive_test_20250526_222712
+2025-05-26 22:27:32,000 - DataAnalysis - [INFO] - Starting complete analysis pipeline...
+2025-05-26 22:27:32,000 - DataAnalysis - [INFO] - Loaded session info: TEST_P001/comprehensive_test
+2025-05-26 22:27:32,012 - DataAnalysis - [INFO] - Loaded 40 events
+2025-05-26 22:27:32,015 - DataAnalysis - [INFO] - Loaded 10 MRS data points
+2025-05-26 22:27:32,015 - DataAnalysis - [ERROR] - Error loading session data: No columns to parse from file
+2025-05-26 22:27:32,015 - DataAnalysis - [ERROR] - Failed to load session data
+2025-05-26 22:27:32,045 - TaskLSLPublishers - [INFO] - M1 tapping LSL stream closed
+2025-05-26 22:27:32,074 - TaskLSLPublishers - [INFO] - V1 orientation LSL stream closed
+2025-05-26 22:27:32,100 - TaskLSLPublishers - [INFO] - Physiological LSL stream closed
+2025-05-26 22:27:32,310 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.017
+2025-05-26 22:27:33,316 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.300
+2025-05-26 22:27:34,320 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.940
+2025-05-26 22:27:35,325 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.576
+2025-05-26 22:27:36,331 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.292
+2025-05-26 22:27:37,334 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.549
+2025-05-26 22:27:38,339 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.776
+2025-05-26 22:27:39,345 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.073
+2025-05-26 22:27:40,349 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.807
+2025-05-26 22:27:40,964 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.60, Gln: 4.81, GABA: 2.06, E/I: 6.499
+2025-05-26 22:27:41,351 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.246
+2025-05-26 22:27:42,354 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.346
+2025-05-26 22:27:43,359 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.309
+2025-05-26 22:27:44,362 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.474
+2025-05-26 22:27:45,367 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.213
+2025-05-26 22:27:46,372 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.305
+2025-05-26 22:27:47,375 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.191
+2025-05-26 22:27:48,380 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.564
+2025-05-26 22:27:49,384 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.120
+2025-05-26 22:27:50,389 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.881
+2025-05-26 22:27:51,395 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.501
+2025-05-26 22:27:51,964 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.17, Gln: 5.11, GABA: 2.17, E/I: 6.107
+2025-05-26 22:27:52,400 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.414
+2025-05-26 22:27:53,401 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.735
+2025-05-26 22:27:54,407 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.323
+2025-05-26 22:27:55,412 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.431
+2025-05-26 22:27:56,418 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.110
+2025-05-26 22:27:57,424 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.999
+2025-05-26 22:27:58,429 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.241
+2025-05-26 22:27:59,435 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.320
+2025-05-26 22:28:00,441 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.065
+2025-05-26 22:28:01,444 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.911
+2025-05-26 22:28:02,450 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.328
+2025-05-26 22:28:02,961 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.90, Gln: 4.91, GABA: 2.13, E/I: 6.487
+2025-05-26 22:28:03,455 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.288
+2025-05-26 22:28:04,460 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.826
+2025-05-26 22:28:05,466 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.507
+2025-05-26 22:28:06,471 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.665
+2025-05-26 22:28:07,474 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.460
+2025-05-26 22:28:08,478 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.593
+2025-05-26 22:28:09,484 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.957
+2025-05-26 22:28:10,489 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.976
+2025-05-26 22:28:11,495 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.069
+2025-05-26 22:28:12,500 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.922
+2025-05-26 22:28:13,506 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.496
+2025-05-26 22:28:13,963 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.00, Gln: 4.82, GABA: 2.12, E/I: 6.041
+2025-05-26 22:28:14,511 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.379
+2025-05-26 22:28:15,517 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.457
+2025-05-26 22:28:16,522 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.043
+2025-05-26 22:28:17,527 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.197
+2025-05-26 22:28:18,533 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.871
+2025-05-26 22:28:19,534 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.174
+2025-05-26 22:28:20,535 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.247
+2025-05-26 22:28:21,541 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.437
+2025-05-26 22:28:22,546 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.861
+2025-05-26 22:28:23,552 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.274
+2025-05-26 22:28:24,556 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.749
+2025-05-26 22:28:24,961 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.00, Gln: 4.86, GABA: 2.04, E/I: 6.303
+2025-05-26 22:28:25,561 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.286
+2025-05-26 22:28:26,567 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.794
+2025-05-26 22:28:27,573 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.708
+2025-05-26 22:28:28,578 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.584
+2025-05-26 22:28:29,584 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.067
+2025-05-26 22:28:30,589 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.961
+2025-05-26 22:28:31,591 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.815
+2025-05-26 22:28:32,595 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.342
+2025-05-26 22:28:33,601 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.004
+2025-05-26 22:28:34,607 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.953
+2025-05-26 22:28:35,612 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.068
+2025-05-26 22:28:35,961 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.22, Gln: 4.79, GABA: 2.16, E/I: 6.006
+2025-05-26 22:28:36,617 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.238
+2025-05-26 22:28:37,623 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.882
+2025-05-26 22:28:38,629 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.643
+2025-05-26 22:28:39,635 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.021
+2025-05-26 22:28:40,640 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.106
+2025-05-26 22:28:41,643 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.890
+2025-05-26 22:28:42,648 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.763
+2025-05-26 22:28:43,650 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.916
+2025-05-26 22:28:44,657 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.954
+2025-05-26 22:28:45,662 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.615
+2025-05-26 22:28:46,667 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.876
+2025-05-26 22:28:46,960 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.00, Gln: 4.50, GABA: 2.19, E/I: 5.704
+2025-05-26 22:28:47,668 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.696
+2025-05-26 22:28:48,673 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.869
+2025-05-26 22:28:49,679 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.674
+2025-05-26 22:28:50,685 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.819
+2025-05-26 22:28:51,691 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.741
+2025-05-26 22:28:52,696 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.903
+2025-05-26 22:28:53,700 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.164
+2025-05-26 22:28:54,704 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.956
+2025-05-26 22:28:55,710 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.286
+2025-05-26 22:28:56,716 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.146
+2025-05-26 22:28:56,962 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.00, Gln: 4.15, GABA: 2.16, E/I: 5.634
+2025-05-26 22:28:57,719 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.942
+2025-05-26 22:28:58,724 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.174
+2025-05-26 22:28:59,726 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.858
+2025-05-26 22:29:00,728 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.732
+2025-05-26 22:29:01,733 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.784
