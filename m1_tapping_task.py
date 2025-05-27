@@ -1,7 +1,7 @@
 import traceback
 from psychopy import visual, core, event, gui, data # gui and data might not be used here anymore
 import pygame # Keep for joystick
-import random
+    import random
 import csv # Added missing import
 # Config and logger will be passed in or handled by the caller (psychopy_display_manager)
 # from config import get_config
@@ -35,32 +35,32 @@ def run_m1_experiment(win, m1_config, logger_m1task):
         logger_m1task.info(f"M1 Task Params - Controller: {controller_type}, Joystick: {joystick_device_name}, Reps: {repetitions}")
         logger_m1task.info(f"M1 Task Params - Base Sequence: {base_sequence}, Display Time: {sequence_display_time}s, Response Cutoff: {response_cutoff_time}s, Randomize: {randomize_sequence}")
 
-        # Initialize pygame for controller input
+    # Initialize pygame for controller input
         # It's generally safe to call pygame.init() multiple times.
         # Joystick init should also be safe or re-check.
-        pygame.init() 
-        pygame.joystick.init()
+    pygame.init()
+    pygame.joystick.init()
 
-        use_joystick = False
+    use_joystick = False
         joystick = None
-        if controller_type == 'bluetooth_joystick':
-            joystick_count = pygame.joystick.get_count()
-            if joystick_count > 0:
+    if controller_type == 'bluetooth_joystick':
+        joystick_count = pygame.joystick.get_count()
+        if joystick_count > 0:
                 if joystick_device_name:
-                    for i in range(joystick_count):
-                        js = pygame.joystick.Joystick(i)
+                for i in range(joystick_count):
+                    js = pygame.joystick.Joystick(i)
                         js.init() # Initialize each joystick to check its name/GUID
                         if joystick_device_name in js.get_name() or joystick_device_name in js.get_guid():
-                            joystick = js
-                            use_joystick = True
+                        joystick = js
+                        use_joystick = True
                             logger_m1task.info(f"M1 Task: Joystick selected: {joystick.get_name()}")
-                            break
+                        break
                     if not use_joystick:
                         logger_m1task.warning(f"M1 Task: Specified joystick '{joystick_device_name}' not found. Found {joystick_count} joysticks. Using keyboard.")
-                else:
+            else:
                     joystick = pygame.joystick.Joystick(0) # Default to first joystick
-                    joystick.init()
-                    use_joystick = True
+                joystick.init()
+                use_joystick = True
                     logger_m1task.info(f"M1 Task: Default joystick detected: {joystick.get_name()}")
             else:
                 logger_m1task.warning("M1 Task: No joystick detected despite bluetooth_joystick config. Using keyboard input.")
@@ -68,22 +68,22 @@ def run_m1_experiment(win, m1_config, logger_m1task):
             logger_m1task.info("M1 Task: Controller set to keyboard. Using keyboard input.")
 
         # Main experiment loop for repetitions
-        for rep in range(repetitions):
-            expected_sequence = list(base_sequence)
-            if randomize_sequence:
-                random.shuffle(expected_sequence)
+    for rep in range(repetitions):
+        expected_sequence = list(base_sequence)
+        if randomize_sequence:
+            random.shuffle(expected_sequence)
                 logger_m1task.info(f"M1 Task: Repetition {rep+1}/{repetitions} - Randomized Sequence: {expected_sequence}")
-            else:
+        else:
                 logger_m1task.info(f"M1 Task: Repetition {rep+1}/{repetitions} - Sequence: {expected_sequence}")
 
             # Display sequence & collect responses simultaneously
-            sequence_text = visual.TextStim(win, text='-'.join(expected_sequence), color='white', height=50)
+        sequence_text = visual.TextStim(win, text='-'.join(expected_sequence), color='white', height=50)
             
             # Prepare for response collection during sequence display and after
-            response_sequence = []
-            response_times = []
+        response_sequence = []
+        response_times = []
             # tap_clock will measure time from the onset of the sequence display
-            tap_clock = core.Clock() 
+        tap_clock = core.Clock()
             
             logger_m1task.info(f"M1 Task: Displaying sequence for {sequence_display_time}s. Input allowed.")
             sequence_display_timer = core.CountdownTimer(sequence_display_time)
@@ -124,7 +124,7 @@ def run_m1_experiment(win, m1_config, logger_m1task):
             logger_m1task.info(f"M1 Task: Sequence display finished. Collected {len(response_sequence)} responses so far.")
 
             # --- Phase 2: Additional Response Time (if needed) with Cutoff --- 
-            instruction_text = visual.TextStim(win, text='Replicate the sequence now!', color='white', height=30)
+        instruction_text = visual.TextStim(win, text='Replicate the sequence now!', color='white', height=30)
             # The tap_clock continues from the sequence display onset.
             # Or, reset clock if RT should be from instruction onset: tap_clock.reset() 
             # For now, let's keep tap_clock continuous to measure from sequence start.
@@ -142,14 +142,14 @@ def run_m1_experiment(win, m1_config, logger_m1task):
                 current_timestamp = None # This timestamp will be from tap_clock (sequence onset)
 
                 if use_joystick and joystick:
-                    for event_pygame in pygame.event.get(): 
-                        if event_pygame.type == pygame.JOYBUTTONDOWN:
+                for event_pygame in pygame.event.get():
+                    if event_pygame.type == pygame.JOYBUTTONDOWN:
                             if event_pygame.instance_id == joystick.get_id():
                                 current_key_pressed = str(event_pygame.button)
                                 current_timestamp = tap_clock.getTime()
                                 break 
-                else: 
-                    keys = event.getKeys(keyList=['1', '2', '3', '4'], timeStamped=tap_clock)
+            else:
+                keys = event.getKeys(keyList=['1', '2', '3', '4'], timeStamped=tap_clock)
                     if keys:
                         current_key_pressed, current_timestamp = keys[0]
                 
@@ -178,11 +178,11 @@ def run_m1_experiment(win, m1_config, logger_m1task):
                 logger_m1task.info(f"M1 Task: Response cutoff time ({response_cutoff_time}s) reached. {len(response_sequence)} responses collected.")
 
             # Evaluate sequence
-            sequence_correct = response_sequence == expected_sequence
+        sequence_correct = response_sequence == expected_sequence
             feedback_text_str = 'Correct!' if sequence_correct else 'Incorrect sequence.'
             feedback_stim = visual.TextStim(win, text=feedback_text_str, color='green' if sequence_correct else 'red', height=40)
             feedback_stim.draw()
-            win.flip()
+        win.flip()
             core.wait(2) # Display feedback for 2 seconds
             
             # Data saving
@@ -207,15 +207,15 @@ def run_m1_experiment(win, m1_config, logger_m1task):
 
         logger_m1task.info("M1 Tapping Task completed successfully.")
 
-    except Exception as e:
+except Exception as e:
         logger_m1task.error(f"M1 Task: An error occurred during the M1 task experiment: {e}")
         logger_m1task.error(traceback.format_exc())
         try:
             # Attempt to display error on the provided PsychoPy window
             error_text = visual.TextStim(win, text=f"Error in M1 Task: {str(e)}\nCheck logs.",
                                        color='red', height=0.07, wrapWidth=1.8)
-            error_text.draw()
-            win.flip()
+        error_text.draw()
+        win.flip()
             core.wait(3) # Show error for 3 seconds
         except Exception as e_display:
             logger_m1task.error(f"M1 Task: Could not display error in M1 task window: {e_display}")

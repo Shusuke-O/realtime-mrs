@@ -11,6 +11,8 @@ import threading
 from psychopy import visual, core, event
 import traceback
 import queue # For thread-safe command queue
+import socket  # Added for E/I network server
+import time    # Added for E/I network server
 
 # --- Potentially import task-specific configurations or utilities ---
 from config import get_config # Assuming this is your central config loader
@@ -19,8 +21,6 @@ from logger import get_logger # Assuming this is your central logger getter
 # --- Import task functions ---
 from m1_tapping_task import run_m1_experiment
 from v1_orientation_task import run_v1_experiment # Added V1 import
-from ei_display_task import run_ei_display # Added E/I display task import
-print("[PDM] ei_display_task imported.", file=sys.stderr) # DEBUG PRINT
 
 # Initialize logger for psychopy_display_manager
 logger = get_logger("PsychoPyDisplayManager") # Added logger initialization
@@ -39,9 +39,13 @@ keep_running = True
 input_thread = None
 command_queue = queue.Queue() # Thread-safe queue for commands
 
-# Variables for managing the E/I task thread
-ei_task_thread = None
-ei_task_stop_event = None
+# --- E/I Display Management Globals ---
+ei_display_active = False
+ei_msg_queue = queue.Queue()
+ei_circle = None
+ei_status = None
+ei_network_thread = None
+ei_stop_event = None
 
 def setup_psychopy_window():
     """Initializes the PsychoPy window."""
@@ -103,7 +107,7 @@ def show_message(text_content, add_prompt=False):
 
 def handle_command(command_data):
     """Handles a command received from stdin."""
-    global keep_running, win, ei_task_thread, ei_task_stop_event
+    global keep_running, win, ei_display_active
     if not win:
         print("PsychoPy Display Manager: handle_command called but no window.", file=sys.stderr)
         return
@@ -211,23 +215,16 @@ def handle_command(command_data):
                 command_queue.put({"action": "show_standby"})
         elif action == "run_ei_task":
             logger.info("PsychoPy Display Manager: Received run_ei_task command.")
-            if ei_task_thread and ei_task_thread.is_alive():
-                logger.warning("E/I task is already running. Sending stop command first.")
-                if ei_task_stop_event: ei_task_stop_event.set()
-                if ei_task_thread: ei_task_thread.join(timeout=1.5)
-                if ei_task_thread and ei_task_thread.is_alive():
-                    logger.error("Could not stop previous E/I task thread. Aborting new task run.")
-                    command_queue.put({"action": "show_text", "content": "Error: Could not stop previous E/I task.", "wait_for_enter": False})
-                    command_queue.put({"action": "show_standby"})
-                    return # Exit handler
+            if ei_display_active:
+                logger.warning("E/I display already active – ignoring duplicate start command.")
+                return
 
-            clear_screen() # Clear any existing general PDM stimuli
-            show_message("Starting E/I Ratio Visualization Task...", add_prompt=False) # PDM shows a brief message
-            core.wait(0.5) # Let message display
-            # The run_ei_display will manage its own stimuli (circle, status text)
-            # So, we clear PDM's general stimuli before handing over.
-            clear_screen() 
-            win.flip() # Ensure screen is blank before E/I task draws its own
+            # Brief on-screen status then start task
+            clear_screen()
+            show_message("Starting E/I Ratio Visualization Task...", add_prompt=False)
+            core.wait(0.5)
+            clear_screen()
+            win.flip()
 
             try:
                 ei_task_config = {
@@ -238,50 +235,25 @@ def handle_command(command_data):
                     'circle_line_color': get_config('ei_task.circle_line_color', 'white'),
                     'data_timeout_seconds': get_config('ei_task.data_timeout_seconds', 10),
                     'text_color': get_config('ei_task.text_color', 'white'),
-                    'text_height_pix': get_config('ei_task.text_height_pix', 20),
-                    'debug_mode': get_config('ei_task.debug_mode', False) # Load debug mode
+                    'text_height_pix': get_config('ei_task.text_height_pix', 20)
                 }
                 logger.info(f"PsychoPy Display Manager: E/I Task Config loaded: {ei_task_config}")
-                print("[PDM] E/I Task config loaded. About to create stop_event and thread.", file=sys.stderr) # DEBUG PRINT
 
-                ei_task_stop_event = threading.Event()
-                # run_ei_display will run in its own thread, managing its own PsychoPy objects drawing loop
-                print("[PDM] About to create E/I task thread.", file=sys.stderr) # DEBUG PRINT
-                ei_task_thread = threading.Thread(target=run_ei_display, 
-                                                args=(win, ei_task_config, logger, ei_task_stop_event),
-                                                daemon=True)
-                print("[PDM] E/I task thread object created. About to start.", file=sys.stderr) # DEBUG PRINT
-                ei_task_thread.start()
-                logger.info("PsychoPy Display Manager: E/I Display task thread started.")
-                print("[PDM] E/I task thread supposedly started.", file=sys.stderr) # DEBUG PRINT
+                _start_ei_display_task(ei_task_config)
 
             except Exception as e_task_setup:
-                error_message_task_setup = f"Error setting up E/I task: {e_task_setup}"
-                logger.error(f"PsychoPy Display Manager: {error_message_task_setup}")
+                error_message_task_setup = f"Error setting up E/I display: {e_task_setup}"
+                logger.error(error_message_task_setup)
                 traceback.print_exc(file=sys.stderr)
                 command_queue.put({"action": "show_text", "content": error_message_task_setup, "wait_for_enter": False})
                 command_queue.put({"action": "show_standby"})
 
         elif action == "stop_ei_task":
             logger.info("PsychoPy Display Manager: Received stop_ei_task command.")
-            if ei_task_thread and ei_task_thread.is_alive():
-                if ei_task_stop_event: 
-                    ei_task_stop_event.set()
-                logger.info("Waiting for E/I display task thread to finish...")
-                ei_task_thread.join(timeout=2.0) # Wait for the thread to clean up
-                if ei_task_thread.is_alive():
-                    logger.warning("E/I display task thread did not stop in time.")
-                else:
-                    logger.info("E/I display task thread finished.")
-            else:
-                logger.info("E/I display task not running or already stopped.")
-            
-            ei_task_thread = None
-            ei_task_stop_event = None
-            # After stopping, PDM should regain control of the display
-            clear_screen() # Clear any remnants from E/I task
-            command_queue.put({"action": "show_text", "content": "E/I Task Stopped.", "wait_for_enter": False}) # Short confirmation
-            core.wait(0.1) # give a tick for text to draw before standby command might clear it
+            _stop_ei_display_task()
+            clear_screen()
+            command_queue.put({"action": "show_text", "content": "E/I Task Stopped.", "wait_for_enter": False})
+            core.wait(0.1)
             command_queue.put({"action": "show_standby"})
 
         else:
@@ -347,6 +319,26 @@ def main_loop():
                 traceback.print_exc(file=sys.stderr)
                 # Potentially signal shutdown or try to recover, for now just log
 
+            # Apply any pending E/I display updates
+            if ei_display_active:
+                try:
+                    while True:
+                        msg_type, val = ei_msg_queue.get_nowait()
+                        if msg_type == 'status' and ei_status:
+                            ei_status.text = val
+                        elif msg_type == 'circle_size' and ei_circle:
+                            ei_circle.size = (val, val)
+                except queue.Empty:
+                    pass
+
+                # Allow experimenter to stop E/I task with ESC key
+                keys = event.getKeys(keyList=['escape'])
+                if 'escape' in keys:
+                    logger.info("Escape pressed – stopping E/I display task.")
+                    _stop_ei_display_task()
+                    clear_screen()
+                    command_queue.put({"action": "show_standby"})
+
             # Drawing is handled by autoDraw stimuli or by specific command handlers
             try:
                 win.flip() 
@@ -381,6 +373,161 @@ def main_loop():
         # core.quit() can be problematic if other psychopy things are running or if not main thread.
         # For a subprocess that is meant to be managed, process termination by menu.py is the final cleanup.
         print("PsychoPy Display Manager: Cleanup finished. Exiting.", file=sys.stderr)
+
+# --------------------
+# Helper functions for E/I display management
+# --------------------
+
+def _start_ei_display_task(config):
+    """Create stimuli in the main thread and launch the background TCP listener."""
+    global ei_display_active, ei_msg_queue, ei_circle, ei_status, ei_network_thread, ei_stop_event
+
+    if ei_display_active:
+        logger.warning("E/I display already active – start request ignored.")
+        return
+
+    # Create stimuli in the main (OpenGL) thread
+    try:
+        ei_circle = visual.Circle(
+            win,
+            size=config.get('initial_radius_pix', 50) * 2,
+            fillColor=config.get('circle_fill_color', 'cyan'),
+            lineColor=config.get('circle_line_color', 'white'),
+            units='pix', pos=(0, 0)
+        )
+        ei_circle.setAutoDraw(True)
+
+        ei_status = visual.TextStim(
+            win,
+            text="E/I: Waiting for client...",
+            pos=(0, win.size[1] * 0.4),
+            color=config.get('text_color', 'white'),
+            height=config.get('text_height_pix', 20),
+            units='pix'
+        )
+        ei_status.setAutoDraw(True)
+    except Exception as stim_err:
+        logger.error(f"Failed to create E/I display stimuli: {stim_err}")
+        traceback.print_exc(file=sys.stderr)
+        return
+
+    # Prepare control objects
+    ei_msg_queue = queue.Queue()
+    ei_stop_event = threading.Event()
+
+    HOST = config.get('network_ip', '127.0.0.1')
+    PORT = config.get('network_port', 5005)
+    data_timeout_seconds = config.get('data_timeout_seconds', 10)
+
+    def network_loop():
+        server_socket = None
+        client_conn = None
+        last_data_time = time.time()
+        try:
+            server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            server_socket.bind((HOST, PORT))
+            server_socket.listen(1)
+            server_socket.settimeout(0.5)
+            logger.info(f"[E/I] TCP server listening on {HOST}:{PORT}")
+            ei_msg_queue.put(("status", f"E/I: Waiting for client on {HOST}:{PORT}"))
+            while not ei_stop_event.is_set():
+                if not client_conn:
+                    try:
+                        client_conn, addr = server_socket.accept()
+                        client_conn.settimeout(0.1)
+                        logger.info(f"[E/I] Client connected from {addr}")
+                        ei_msg_queue.put(("status", f"E/I: Client connected from {addr[0]}"))
+                        last_data_time = time.time()
+                    except socket.timeout:
+                        continue
+                else:
+                    try:
+                        data_bytes = client_conn.recv(1024)
+                        if not data_bytes:
+                            logger.info("[E/I] Client disconnected.")
+                            ei_msg_queue.put(("status", "E/I: Client disconnected. Waiting..."))
+                            client_conn.close()
+                            client_conn = None
+                            continue
+                        last_data_time = time.time()
+                        try:
+                            ei_ratio = float(data_bytes.decode().strip())
+                            new_diameter = max(10, int(ei_ratio * 20))
+                            ei_msg_queue.put(("circle_size", new_diameter))
+                            ei_msg_queue.put(("status", f"E/I Ratio: {ei_ratio:.2f}"))
+                        except Exception:
+                            logger.warning(f"[E/I] Invalid data received: {data_bytes}")
+                    except socket.timeout:
+                        if time.time() - last_data_time > data_timeout_seconds:
+                            logger.info("[E/I] Data timeout. Closing client.")
+                            ei_msg_queue.put(("status", "E/I: Client timed out. Waiting..."))
+                            client_conn.close()
+                            client_conn = None
+                        continue
+                    except Exception as net_err:
+                        logger.error(f"[E/I] Network error: {net_err}")
+                        ei_msg_queue.put(("status", "E/I: Network error. Waiting..."))
+                        if client_conn:
+                            client_conn.close()
+                        client_conn = None
+                        continue
+        except Exception as sock_err:
+            logger.error(f"[E/I] Server error: {sock_err}")
+            ei_msg_queue.put(("status", f"E/I: Server error: {sock_err}"))
+        finally:
+            if client_conn:
+                try:
+                    client_conn.close()
+                except Exception:
+                    pass
+            if server_socket:
+                try:
+                    server_socket.close()
+                except Exception:
+                    pass
+            logger.info("[E/I] Network thread finished.")
+
+    ei_network_thread = threading.Thread(target=network_loop, daemon=True)
+    ei_network_thread.start()
+
+    ei_display_active = True
+    logger.info("E/I display task started (network thread launched).")
+
+
+def _stop_ei_display_task():
+    """Signal the network thread to stop and remove stimuli."""
+    global ei_display_active, ei_msg_queue, ei_circle, ei_status, ei_network_thread, ei_stop_event
+
+    if not ei_display_active:
+        logger.info("E/I display not active – stop request ignored.")
+        return
+
+    if ei_stop_event:
+        ei_stop_event.set()
+
+    if ei_network_thread and ei_network_thread.is_alive():
+        ei_network_thread.join(timeout=1.0)
+
+    if ei_circle:
+        ei_circle.setAutoDraw(False)
+    if ei_status:
+        ei_status.setAutoDraw(False)
+
+    # Drain any remaining messages
+    while not ei_msg_queue.empty():
+        try:
+            ei_msg_queue.get_nowait()
+        except queue.Empty:
+            break
+
+    ei_circle = None
+    ei_status = None
+    ei_network_thread = None
+    ei_stop_event = None
+    ei_display_active = False
+
+    logger.info("E/I display task stopped and cleaned up.")
 
 if __name__ == "__main__":
     print("PsychoPy Display Manager: Script starting (__main__).", file=sys.stderr)

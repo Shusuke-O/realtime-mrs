@@ -20,9 +20,14 @@ class TaskMenu:
     def __init__(self):
         self.tasks = [
             {
-                "name": "E/I Ratio Visualization",
-                "description": "Visualize E/I ratio with a circle that changes size",
+                "name": "E/I Ratio Visualization (TCP)",
+                "description": "Visualize E/I ratio with a circle that changes size (TCP-based)",
                 "command": self.run_ei_visualization
+            },
+            {
+                "name": "FSL-MRS E/I Visualization (LSL)",
+                "description": "FSL-MRS E/I ratio visualization using Lab Streaming Layer",
+                "command": self.run_fsl_mrs_lsl_visualization
             },
             {
                 "name": "M1 Task",
@@ -107,7 +112,8 @@ class TaskMenu:
         if pipe:
             try:
                 for line in iter(pipe.readline, ''):
-                    logger.info(f"{process_name}: {line.strip()}")
+                    if line.strip():
+                        logger.info(f"{process_name}: {line.strip()}")
             except Exception as e:
                 logger.error(f"Error while monitoring {process_name}: {e}")
             finally:
@@ -116,7 +122,7 @@ class TaskMenu:
                 # pipe.close() # REMOVED
                 pass 
         logger.info(f"Finished monitoring {process_name}.") # This means readline returned empty, i.e., pipe closed by the other end or EOF
-
+        
     def run_task_subprocess(self, task_name, command_list, intro_key):
         intro_text = TASK_INTRODUCTIONS.get(intro_key, "No introduction available for this task.")
         self.show_task_intro(task_name, intro_text)
@@ -308,7 +314,7 @@ class TaskMenu:
                 daemon=True
             )
             sender_monitor_thread_stderr.start()
-
+            
             logger.info(f"sent_ei.py process started (PID: {sender_process.pid}). Waiting for it to complete...")
             print("E/I data sender is running. Press Ctrl+C in the terminal running menu.py to stop the sender if needed, then it will tell PDM to stop the visualizer.")
             
@@ -322,6 +328,11 @@ class TaskMenu:
             logger.info("KeyboardInterrupt caught in run_ei_visualization. Terminating sender if running.")
             if sender_process and sender_process.poll() is None:
                 logger.info("Terminating sent_ei.py process due to KeyboardInterrupt in menu...")
+                try:
+                    sender_process.terminate()
+                    sender_process.wait(timeout=2)
+                except subprocess.TimeoutExpired:
+                    sender_process.kill()
                 sender_process.terminate()
                 try:
                     sender_process.wait(timeout=2)
@@ -329,7 +340,7 @@ class TaskMenu:
                     sender_process.kill()
             # The main Ctrl+C handler for menu.py will take care of stopping PDM if necessary.
             # Here, we mainly ensure the sender is stopped.
-
+            
         except Exception as e:
             logger.error(f"Error running E/I visualization (sent_ei.py part): {e}")
             traceback.print_exc()
@@ -354,6 +365,151 @@ class TaskMenu:
         logger.info("E/I Ratio Visualization task sequence finished. Returning to menu...")
         # PDM will show standby automatically after stop_ei_task completes fully.
 
+    def run_fsl_mrs_lsl_visualization(self):
+        """Run FSL-MRS LSL-based E/I Ratio Visualization Task."""
+        intro_text = """
+                    Welcome to the FSL-MRS LSL E/I Ratio Visualization Task!
+
+                    This task uses Lab Streaming Layer (LSL) to stream real-time E/I ratio data
+                    from FSL-MRS analysis to the visualization system.
+
+                    The system will:
+                    1. Start an LSL publisher that streams E/I ratio data
+                    2. Start an LSL receiver that forwards data to the visualization
+                    3. Display the real-time E/I ratio as a changing circle
+
+                    You will see a circle on the screen that changes size based on the
+                    excitatory/inhibitory ratio calculated from MRS data.
+
+                    Press Enter when ready to begin, or Escape to cancel.
+                    """
+        
+        self.show_task_intro("FSL-MRS LSL E/I Visualization", intro_text)
+
+        # Tell PDM to start the E/I display listener
+        logger.info("Sending command to PsychoPyDisplayManager to run E/I task display...")
+        self.send_psychopy_command({"action": "run_ei_task"})
+        
+        # Allow a moment for PDM to start the E/I listener/server part
+        time.sleep(1.5)
+
+        # Start the FSL-MRS LSL publisher and receiver processes
+        fsl_mrs_process = None
+        lsl_receiver_process = None
+        fsl_mrs_monitor_thread_stdout = None
+        fsl_mrs_monitor_thread_stderr = None
+        lsl_receiver_monitor_thread_stdout = None
+        lsl_receiver_monitor_thread_stderr = None
+        
+        try:
+            # Start FSL-MRS LSL publisher
+            logger.info("Starting FSL-MRS LSL publisher subprocess...")
+            fsl_mrs_process = subprocess.Popen(
+                ["poetry", "run", "python", "fsl_mrs_lsl_publisher.py", "--simulation"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                bufsize=1,
+                universal_newlines=True
+            )
+            
+            # Monitor FSL-MRS publisher output
+            fsl_mrs_monitor_thread_stdout = threading.Thread(
+                target=self.monitor_process, 
+                args=(fsl_mrs_process, f"FSL_MRS_stdout_pid{fsl_mrs_process.pid}"),
+                daemon=True
+            )
+            fsl_mrs_monitor_thread_stdout.start()
+
+            fsl_mrs_monitor_thread_stderr = threading.Thread(
+                target=self.monitor_process, 
+                args=(fsl_mrs_process, f"FSL_MRS_stderr_pid{fsl_mrs_process.pid}"),
+                daemon=True
+            )
+            fsl_mrs_monitor_thread_stderr.start()
+            
+            # Give publisher time to start
+            time.sleep(2.0)
+            
+            # Start LSL receiver
+            logger.info("Starting LSL E/I receiver subprocess...")
+            lsl_receiver_process = subprocess.Popen(
+                ["poetry", "run", "python", "lsl_ei_receiver.py"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                bufsize=1,
+                universal_newlines=True
+            )
+            
+            # Monitor LSL receiver output
+            lsl_receiver_monitor_thread_stdout = threading.Thread(
+                target=self.monitor_process, 
+                args=(lsl_receiver_process, f"LSL_Receiver_stdout_pid{lsl_receiver_process.pid}"),
+                daemon=True
+            )
+            lsl_receiver_monitor_thread_stdout.start()
+
+            lsl_receiver_monitor_thread_stderr = threading.Thread(
+                target=self.monitor_process, 
+                args=(lsl_receiver_process, f"LSL_Receiver_stderr_pid{lsl_receiver_process.pid}"),
+                daemon=True
+            )
+            lsl_receiver_monitor_thread_stderr.start()
+            
+            logger.info(f"FSL-MRS LSL system started (Publisher PID: {fsl_mrs_process.pid}, "
+                       f"Receiver PID: {lsl_receiver_process.pid}). Waiting for completion...")
+            print("FSL-MRS LSL E/I visualization is running. Press Ctrl+C in the terminal running menu.py to stop.")
+            
+            # Wait for either process to complete (or Ctrl+C)
+            while True:
+                if fsl_mrs_process.poll() is not None:
+                    logger.info(f"FSL-MRS publisher process finished with exit code {fsl_mrs_process.returncode}.")
+                    break
+                if lsl_receiver_process.poll() is not None:
+                    logger.info(f"LSL receiver process finished with exit code {lsl_receiver_process.returncode}.")
+                    break
+                time.sleep(0.5)
+
+        except KeyboardInterrupt:
+            logger.info("KeyboardInterrupt caught in run_fsl_mrs_lsl_visualization. Terminating processes.")
+            
+        except Exception as e:
+            logger.error(f"Error running FSL-MRS LSL visualization: {e}")
+            traceback.print_exc()
+            
+        finally:
+            # Clean up processes
+            if fsl_mrs_process and fsl_mrs_process.poll() is None:
+                logger.info("Terminating FSL-MRS publisher process...")
+                try:
+                    fsl_mrs_process.terminate()
+                    fsl_mrs_process.wait(timeout=2)
+                except subprocess.TimeoutExpired:
+                    fsl_mrs_process.kill()
+                    
+            if lsl_receiver_process and lsl_receiver_process.poll() is None:
+                logger.info("Terminating LSL receiver process...")
+                try:
+                    lsl_receiver_process.terminate()
+                    lsl_receiver_process.wait(timeout=2)
+                except subprocess.TimeoutExpired:
+                    lsl_receiver_process.kill()
+            
+            # Wait for monitor threads to finish
+            for thread in [fsl_mrs_monitor_thread_stdout, fsl_mrs_monitor_thread_stderr,
+                          lsl_receiver_monitor_thread_stdout, lsl_receiver_monitor_thread_stderr]:
+                if thread and thread.is_alive():
+                    thread.join(timeout=0.5)
+            
+            logger.info("Finished cleaning up FSL-MRS LSL processes.")
+            
+            # Always tell PDM to stop the E/I display task
+            logger.info("Sending command to PsychoPyDisplayManager to stop E/I task display...")
+            self.send_psychopy_command({"action": "stop_ei_task"})
+
+        logger.info("FSL-MRS LSL E/I Ratio Visualization task sequence finished. Returning to menu...")
+        
     def show_task_intro(self, task_name, description=None):
         self.display_header() # Keep terminal header for experimenter
         print(f"Displaying instructions for {task_name} on PsychoPy screen...")
@@ -453,7 +609,8 @@ class TaskMenu:
         sys.exit(0)
 
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the application."""
     try:
         menu = TaskMenu()
         menu.run()
@@ -462,4 +619,7 @@ if __name__ == "__main__":
     except Exception as e:
         logger.critical(f"Critical unhandled error at top level of menu.py: {e}")
         traceback.print_exc()
-        print("A critical error occurred. Please check the log file.", file=sys.stderr) 
+        print("A critical error occurred. Please check the log file.", file=sys.stderr)
+
+if __name__ == "__main__":
+    main() 

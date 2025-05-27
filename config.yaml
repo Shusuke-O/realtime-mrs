@@ -32,3 +32,34 @@ ei_task:
   text_color: 'white'
   text_height_pix: 20
   debug_mode: false           # Set to true for more verbose logging from ei_display_task (if implemented)
+
+# FSL-MRS LSL Configuration
+fsl_mrs_lsl:
+  stream_name: 'FSL-MRS-EI-Ratio'
+  stream_type: 'EI_Ratio'
+  source_id: 'fsl-mrs-ei-001'
+  sampling_rate: 1.0  # Hz
+  simulation_mode: true  # Set to false when using real FSL-MRS
+  simulation_range: [0.3, 1.2]  # Min/max E/I ratio values
+  simulation_noise: 0.05  # Noise level for simulation
+
+# FSL-MRS Configuration
+fsl_mrs:
+  data_path: null  # Path to MRS data files
+  basis_set_path: null  # Path to basis set files
+  fitting_params:
+    # FSL-MRS fitting parameters would go here
+    # These depend on the specific FSL-MRS API
+
+# LSL E/I Receiver Configuration
+lsl_ei_receiver:
+  stream_name: 'FSL-MRS-EI-Ratio'
+  stream_type: 'EI_Ratio'
+  source_id: null  # null means any source
+  forward_host: '127.0.0.1'
+  forward_port: 5005
+  forward_enabled: true
+  connection_retry_interval: 5.0  # seconds
+  stream_resolve_timeout: 5.0  # seconds
+  buffer_length: 360  # seconds
+  max_chunk_length: 0  # 0 = no chunking
