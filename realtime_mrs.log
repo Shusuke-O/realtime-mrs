@@ -5714,3 +5714,54 @@
 2025-05-26 22:28:59,726 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.858
 2025-05-26 22:29:00,728 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.732
 2025-05-26 22:29:01,733 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.784
+2025-05-26 22:29:02,738 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.574
+2025-05-26 22:29:03,744 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.021
+2025-05-26 22:29:04,749 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.114
+2025-05-26 22:29:05,755 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.519
+2025-05-26 22:29:06,758 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.925
+2025-05-26 22:29:06,966 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.00, Gln: 4.24, GABA: 2.15, E/I: 5.689
+2025-05-26 22:29:07,761 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.877
+2025-05-26 22:29:08,765 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.717
+2025-05-26 22:29:09,770 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.641
+2025-05-26 22:29:10,775 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.895
+2025-05-26 22:29:11,780 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.075
+2025-05-26 22:29:12,786 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.306
+2025-05-26 22:29:13,791 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.002
+2025-05-26 22:29:14,797 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.549
+2025-05-26 22:29:15,801 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.854
+2025-05-26 22:29:16,807 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.859
+2025-05-26 22:29:17,812 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.115
+2025-05-26 22:29:17,963 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.28, Gln: 4.40, GABA: 2.08, E/I: 6.100
+2025-05-26 22:29:18,817 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.985
+2025-05-26 22:29:19,822 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.867
+2025-05-26 22:29:20,824 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.440
+2025-05-26 22:29:21,829 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.620
+2025-05-26 22:29:22,835 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.692
+2025-05-26 22:29:23,837 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.849
+2025-05-26 22:29:24,842 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.884
+2025-05-26 22:29:25,848 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.080
+2025-05-26 22:29:26,853 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.611
+2025-05-26 22:29:27,855 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.069
+2025-05-26 22:29:28,856 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.084
+2025-05-26 22:29:28,962 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.00, Gln: 4.36, GABA: 2.08, E/I: 5.941
+2025-05-26 22:29:29,857 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.577
+2025-05-26 22:29:30,862 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.983
+2025-05-26 22:29:31,867 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.557
+2025-05-26 22:29:32,872 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.689
+2025-05-26 22:29:33,878 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.764
+2025-05-26 22:29:34,884 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.917
+2025-05-26 22:29:35,885 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.424
+2025-05-26 22:29:36,891 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.950
+2025-05-26 22:29:37,894 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.662
+2025-05-26 22:29:38,899 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.809
+2025-05-26 22:29:39,900 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.769
+2025-05-26 22:29:39,959 - FSL_MRS_LSL_Publisher - [INFO] - Metabolite concentrations - Glu: 8.00, Gln: 4.04, GABA: 2.08, E/I: 5.781
+2025-05-26 22:29:40,902 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.793
+2025-05-26 22:29:41,907 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.554
+2025-05-26 22:29:42,911 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.024
+2025-05-26 22:29:43,917 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.088
+2025-05-26 22:29:44,922 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.790
+2025-05-26 22:29:45,927 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.526
+2025-05-26 22:29:46,933 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.713
+2025-05-26 22:29:47,939 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.882
+2025-05-26 22:29:48,944 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.863
