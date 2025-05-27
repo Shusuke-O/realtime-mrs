@@ -138,11 +138,11 @@ class LSLEIReceiver:
                 # Use specific criteria
                 query = " and ".join(search_criteria)
                 self.logger.info(f"Searching for streams with criteria: {query}")
-                streams = resolve_stream('name', self.stream_name, timeout=timeout)
+                streams = resolve_stream('name', self.stream_name)
             else:
                 # Get all streams
                 self.logger.info("Searching for all available streams")
-                streams = resolve_stream(timeout=timeout)
+                streams = resolve_stream()
             
             self.logger.info(f"Found {len(streams)} matching stream(s)")
             
@@ -179,12 +179,10 @@ class LSLEIReceiver:
             self.logger.info(f"Connecting to stream: {stream_info.name()}")
             
             # Create inlet
-            buffer_length = self.config.get('buffer_length', 360)
             max_chunk_length = self.config.get('max_chunk_length', 0)
             
             self.inlet = StreamInlet(
                 stream_info,
-                buffer_length=buffer_length,
                 max_chunklen=max_chunk_length
             )
             

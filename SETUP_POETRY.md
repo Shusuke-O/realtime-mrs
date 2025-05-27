@@ -18,16 +18,19 @@ This guide helps you get started with the realtime-mrs system using Poetry for d
    poetry install
    ```
 
-2. **Test the LSL system:**
+2. **Install LSL library (macOS):**
    ```bash
-   poetry run test-lsl
+   brew install labstreaminglayer/tap/lsl
    ```
 
-3. **Run the main application:**
+3. **Test the LSL system:**
    ```bash
-   poetry run realtime-mrs
-   # Or alternatively:
-   poetry run python menu.py
+   DYLD_LIBRARY_PATH=/usr/local/lib poetry run python test_lsl_system.py
+   ```
+
+4. **Run the main application:**
+   ```bash
+   DYLD_LIBRARY_PATH=/usr/local/lib poetry run python menu.py
    ```
 
 ## Available Poetry Commands
@@ -44,8 +47,8 @@ poetry run test-lsl              # Test the complete LSL pipeline
 
 ### Individual Components
 ```bash
-poetry run fsl-mrs-publisher --simulation    # Run FSL-MRS publisher in simulation mode
-poetry run lsl-receiver                      # Run LSL receiver
+DYLD_LIBRARY_PATH=/usr/local/lib poetry run python fsl_mrs_lsl_publisher.py --simulation    # Run FSL-MRS publisher in simulation mode
+DYLD_LIBRARY_PATH=/usr/local/lib poetry run python lsl_ei_receiver.py                      # Run LSL receiver
 ```
 
 ### Development

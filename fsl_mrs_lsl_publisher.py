@@ -239,8 +239,8 @@ class FSLMRSLSLPublisher:
         """
         try:
             # Generate realistic E/I ratio values with some temporal correlation
-            min_ratio, max_ratio = self.config['simulation_range']
-            noise_level = self.config['simulation_noise']
+            min_ratio, max_ratio = self.config.get('simulation_range', [0.3, 1.2])
+            noise_level = self.config.get('simulation_noise', 0.05)
             
             # Add some temporal correlation to make it more realistic
             trend = 0.1 * np.sin(time.time() * 0.1)  # Slow oscillation
