@@ -5777,3 +5777,148 @@
 2025-05-26 22:29:57,988 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.932
 2025-05-26 22:29:58,990 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=6.131
 2025-05-26 22:29:59,995 - FSL_MRS_LSL_Publisher - [INFO] - Status: Streaming=True, Last E/I=5.646
+2025-05-26 22:57:03,349 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:57:03,349 - TaskMenu - [INFO] - Attempting to start PsychoPy Display Manager process...
+2025-05-26 22:57:03,354 - TaskMenu - [INFO] - PsychoPy Display Manager Popen called. PID: 33311
+2025-05-26 22:57:03,354 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stdout_pid33311...
+2025-05-26 22:57:03,354 - TaskMenu - [INFO] - Monitoring output for PsychoPyMgr_stderr_pid33311...
+2025-05-26 22:57:03,354 - TaskMenu - [INFO] - PsychoPy Display Manager monitor threads started. Waiting a moment for PDM to initialize and show first message...
+2025-05-26 22:57:06,360 - TaskMenu - [INFO] - PsychoPy Display Manager process appears to be running after init. Sending show_standby.
+2025-05-26 22:57:06,361 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 33311): {'action': 'show_standby'}
+2025-05-26 22:57:06,361 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 33311): {'action': 'show_standby'}
+2025-05-26 22:57:06,399 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 22:57:07,123 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: 2025-05-26 22:57:07.108 Python[33311:46143444] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/9l/ttp02lpd0cs0csgy3_1437lc0000gp/T/org.python.python.savedState
+2025-05-26 22:57:08,927 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:57:08,928 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: pygame 2.6.1 (SDL 2.28.4, Python 3.8.19)
+2025-05-26 22:57:08,928 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: Hello from the pygame community. https://www.pygame.org/contribute.html
+2025-05-26 22:57:08,928 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 2025-05-26 22:57:08,927 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:57:09,793 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: 2025-05-26 22:57:09.793 Python[33311:46143444] +[IMKClient subclass]: chose IMKClient_Modern
+2025-05-26 22:57:15,838 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: 2025-05-26 22:57:15.838 Python[33311:46143444] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+2025-05-26 22:57:23,932 - TaskMenu - [INFO] - User selected task number: 1
+2025-05-26 22:57:23,977 - TaskMenu - [INFO] - Displaying menu header.
+2025-05-26 22:57:23,977 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 33311): {'action': 'show_text', 'content': '\nWelcome to the E/I Ratio Visualization Task!\n\nIn this task, you will see a circle on the screen.\nThe size of this circle will change based on real-time brain activity,\nrepresenting the ratio of excitatory to inhibitory neural signals.\n\nYour objective is to observe the changes.\nThere are no specific actions required from you other than to remain still and watch the display.\nThe task will run for a pre-determined duration or until you quit the visualization window.\n', 'wait_for_enter': True}
+2025-05-26 22:57:23,977 - TaskMenu - [INFO] - Participant acknowledged instructions for E/I Ratio Visualization.
+2025-05-26 22:57:23,977 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to run E/I task display...
+2025-05-26 22:57:23,977 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 33311): {'action': 'run_ei_task'}
+2025-05-26 22:57:25,482 - TaskMenu - [INFO] - Starting sent_ei.py subprocess...
+2025-05-26 22:57:25,487 - TaskMenu - [INFO] - Monitoring output for EISender_stdout_pid33335...
+2025-05-26 22:57:25,489 - TaskMenu - [INFO] - Monitoring output for EISender_stderr_pid33335...
+2025-05-26 22:57:25,489 - TaskMenu - [INFO] - sent_ei.py process started (PID: 33335). Waiting for it to complete...
+2025-05-26 22:57:26,300 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:57:26,301 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:26,300 - LoggerSetup - [INFO] - Logging configured. Root level: DEBUG, File/Console level: INFO. Log file: /Users/shusuke_okita/Development/realtime-mrs/realtime_mrs.log
+2025-05-26 22:57:26,309 - sent_ei - [INFO] - Trying to connect to the visualizer at 127.0.0.1:5005
+2025-05-26 22:57:26,309 - sent_ei - [INFO] - Make sure the ei_tcp_event_listener.py is running first!
+2025-05-26 22:57:26,309 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:26,309 - sent_ei - [INFO] - Trying to connect to the visualizer at 127.0.0.1:5005
+2025-05-26 22:57:26,309 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:26,309 - sent_ei - [INFO] - Make sure the ei_tcp_event_listener.py is running first!
+2025-05-26 22:57:26,309 - sent_ei - [WARNING] - Connection attempt 1/10 failed: [Errno 61] Connection refused
+2025-05-26 22:57:26,309 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 22:57:26,309 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:26,309 - sent_ei - [WARNING] - Connection attempt 1/10 failed: [Errno 61] Connection refused
+2025-05-26 22:57:26,309 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:26,309 - sent_ei - [INFO] - Retrying in 2 seconds...
+2025-05-26 22:57:26,328 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_ei_task command.
+2025-05-26 22:57:26,328 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 2025-05-26 22:57:26,328 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: Received run_ei_task command.
+2025-05-26 22:57:26,848 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: E/I Task Config loaded: {'network_ip': '127.0.0.1', 'network_port': 5005, 'initial_radius_pix': 50, 'circle_fill_color': 'cyan', 'circle_line_color': 'white', 'data_timeout_seconds': 10, 'text_color': 'white', 'text_height_pix': 20}
+2025-05-26 22:57:26,848 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 2025-05-26 22:57:26,848 - PsychoPyDisplayManager - [INFO] - PsychoPy Display Manager: E/I Task Config loaded: {'network_ip': '127.0.0.1', 'network_port': 5005, 'initial_radius_pix': 50, 'circle_fill_color': 'cyan', 'circle_line_color': 'white', 'data_timeout_seconds': 10, 'text_color': 'white', 'text_height_pix': 20}
+2025-05-26 22:57:26,877 - PsychoPyDisplayManager - [INFO] - E/I display task started (network thread launched).
+2025-05-26 22:57:26,877 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 2025-05-26 22:57:26,877 - PsychoPyDisplayManager - [INFO] - E/I display task started (network thread launched).
+2025-05-26 22:57:26,877 - PsychoPyDisplayManager - [INFO] - [E/I] TCP server listening on 127.0.0.1:5005
+2025-05-26 22:57:26,877 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 2025-05-26 22:57:26,877 - PsychoPyDisplayManager - [INFO] - [E/I] TCP server listening on 127.0.0.1:5005
+2025-05-26 22:57:28,310 - sent_ei - [INFO] - Successfully connected to visualizer
+2025-05-26 22:57:28,310 - PsychoPyDisplayManager - [INFO] - [E/I] Client connected from ('127.0.0.1', 58809)
+2025-05-26 22:57:28,310 - sent_ei - [INFO] - Sent: 6.583
+2025-05-26 22:57:28,310 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:28,310 - sent_ei - [INFO] - Successfully connected to visualizer
+2025-05-26 22:57:28,310 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 2025-05-26 22:57:28,310 - PsychoPyDisplayManager - [INFO] - [E/I] Client connected from ('127.0.0.1', 58809)
+2025-05-26 22:57:28,310 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:28,310 - sent_ei - [INFO] - Sent: 6.583
+2025-05-26 22:57:29,810 - sent_ei - [INFO] - Sent: 8.803
+2025-05-26 22:57:29,811 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:29,810 - sent_ei - [INFO] - Sent: 8.803
+2025-05-26 22:57:31,316 - sent_ei - [INFO] - Sent: 7.909
+2025-05-26 22:57:31,316 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:31,316 - sent_ei - [INFO] - Sent: 7.909
+2025-05-26 22:57:32,818 - sent_ei - [INFO] - Sent: 5.838
+2025-05-26 22:57:32,818 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:32,818 - sent_ei - [INFO] - Sent: 5.838
+2025-05-26 22:57:34,323 - sent_ei - [INFO] - Sent: 7.452
+2025-05-26 22:57:34,323 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:34,323 - sent_ei - [INFO] - Sent: 7.452
+2025-05-26 22:57:35,828 - sent_ei - [INFO] - Sent: 9.402
+2025-05-26 22:57:35,828 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:35,828 - sent_ei - [INFO] - Sent: 9.402
+2025-05-26 22:57:37,333 - sent_ei - [INFO] - Sent: 6.108
+2025-05-26 22:57:37,334 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:37,333 - sent_ei - [INFO] - Sent: 6.108
+2025-05-26 22:57:38,834 - sent_ei - [INFO] - Sent: 9.448
+2025-05-26 22:57:38,834 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:38,834 - sent_ei - [INFO] - Sent: 9.448
+2025-05-26 22:57:40,336 - sent_ei - [INFO] - Sent: 8.477
+2025-05-26 22:57:40,337 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:40,336 - sent_ei - [INFO] - Sent: 8.477
+2025-05-26 22:57:41,837 - sent_ei - [INFO] - Sent: 8.997
+2025-05-26 22:57:41,837 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:41,837 - sent_ei - [INFO] - Sent: 8.997
+2025-05-26 22:57:43,342 - sent_ei - [INFO] - Sent: 9.221
+2025-05-26 22:57:43,343 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:43,342 - sent_ei - [INFO] - Sent: 9.221
+2025-05-26 22:57:44,848 - sent_ei - [INFO] - Sent: 7.56
+2025-05-26 22:57:44,848 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:44,848 - sent_ei - [INFO] - Sent: 7.56
+2025-05-26 22:57:46,353 - sent_ei - [INFO] - Sent: 8.297
+2025-05-26 22:57:46,354 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:46,353 - sent_ei - [INFO] - Sent: 8.297
+2025-05-26 22:57:47,857 - sent_ei - [INFO] - Sent: 6.822
+2025-05-26 22:57:47,857 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:47,857 - sent_ei - [INFO] - Sent: 6.822
+2025-05-26 22:57:49,357 - sent_ei - [INFO] - Sent: 6.464
+2025-05-26 22:57:49,358 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:49,357 - sent_ei - [INFO] - Sent: 6.464
+2025-05-26 22:57:50,858 - sent_ei - [INFO] - Sent: 8.329
+2025-05-26 22:57:50,858 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:50,858 - sent_ei - [INFO] - Sent: 8.329
+2025-05-26 22:57:52,363 - sent_ei - [INFO] - Sent: 7.813
+2025-05-26 22:57:52,363 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:52,363 - sent_ei - [INFO] - Sent: 7.813
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - Ctrl+C detected. Exiting cleanly...
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - Attempting to stop PsychoPy Display Manager...
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - PsychoPy Display Manager (PID: 33311) is running. Sending 'exit' command.
+2025-05-26 22:57:52,700 - sent_ei - [INFO] - Shutting down...
+2025-05-26 22:57:52,700 - sent_ei - [INFO] - Socket closed
+2025-05-26 22:57:52,700 - sent_ei - [INFO] - Sender terminated.
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:52,700 - sent_ei - [INFO] - Shutting down...
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - Sent command to PsychoPy (PID: 33311): {'action': 'exit'}
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:52,700 - sent_ei - [INFO] - Socket closed
+2025-05-26 22:57:52,700 - PsychoPyDisplayManager - [INFO] - [E/I] Client disconnected.
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - Closing stdin for PsychoPy Display Manager (PID: 33311).
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - EISender_stdout_pid33335: 2025-05-26 22:57:52,700 - sent_ei - [INFO] - Sender terminated.
+2025-05-26 22:57:52,700 - TaskMenu - [INFO] - Waiting for PsychoPy Display Manager (PID: 33311) to terminate...
+2025-05-26 22:57:52,701 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Script starting (__main__).
+2025-05-26 22:57:52,701 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 2025-05-26 22:57:52,700 - PsychoPyDisplayManager - [INFO] - [E/I] Client disconnected.
+2025-05-26 22:57:52,701 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Attempting to setup window.
+2025-05-26 22:57:52,701 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Window setup successful.
+2025-05-26 22:57:52,701 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Window setup complete.
+2025-05-26 22:57:52,701 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Initial message shown.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Input thread (read_commands) started.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Input thread scheduled to start.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Received command: show_standby with data: {'action': 'show_standby'}
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Received command: show_text with data: {'action': 'show_text', 'content': '\nWelcome to the E/I Ratio Visualization Task!\n\nIn this task, you will see a circle on the screen.\nThe size of this circle will change based on real-time brain activity,\nrepresenting the ratio of excitatory to inhibitory neural signals.\n\nYour objective is to observe the changes.\nThere are no specific actions required from you other than to remain still and watch the display.\nThe task will run for a pre-determined duration or until you quit the visualization window.\n', 'wait_for_enter': True}
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Waiting for Enter key press...
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Enter key pressed.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Finished wait_for_enter.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Received command: run_ei_task with data: {'action': 'run_ei_task'}
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Main loop ended (keep_running=True). Cleaning up.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Waiting for input thread to finish...
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: keep_running is false, stopping command reading.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: stdin closed or keep_running became false. Exiting read_commands.
+2025-05-26 22:57:52,702 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: PsychoPy Display Manager: Cleanup finished. Exiting.
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: Traceback (most recent call last):
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: File "psychopy_display_manager.py", line 534, in <module>
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: main_loop()
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: File "psychopy_display_manager.py", line 350, in main_loop
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: core.wait(0.01) # Yield time
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: File "/Users/shusuke_okita/Library/Caches/pypoetry/virtualenvs/realtime-mrs-Jmk7WT3v-py3.8/lib/python3.8/site-packages/psychopy/clock.py", line 593, in wait
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: time.sleep(sleepDur)
+2025-05-26 22:57:52,703 - TaskMenu - [INFO] - PsychoPyMgr_stderr_pid33311: KeyboardInterrupt
+2025-05-26 22:57:52,708 - TaskMenu - [INFO] - Finished monitoring EISender_stdout_pid33335.
+2025-05-26 22:57:52,708 - TaskMenu - [INFO] - Finished monitoring EISender_stderr_pid33335.
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 4.7686 	WARNING 	Monitor specification not found. Creating a temporary one...
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 6.6590 	WARNING 	Couldn't measure a consistent frame rate!
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: - Is your graphics card set to sync to vertical blank?
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: - Are you running other processes on your computer?
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 6.7081 	WARNING 	t of last frame was 44.85ms (=1/22)
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 8.6796 	WARNING 	t of last frame was 21.23ms (=1/47)
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 11.0751 	WARNING 	t of last frame was 27.52ms (=1/36)
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 11.2585 	WARNING 	t of last frame was 27.49ms (=1/36)
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 11.4087 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 22.7047 	WARNING 	fillRGB parameter is deprecated. Please use lineColor and colorSpace instead
+2025-05-26 22:57:52,716 - TaskMenu - [INFO] - PsychoPyMgr_stdout_pid33311: 22.7048 	WARNING 	lineRGB parameter is deprecated. Please use lineColor and colorSpace instead
+2025-05-26 22:57:52,920 - TaskMenu - [INFO] - Finished monitoring PsychoPyMgr_stderr_pid33311.
+2025-05-26 22:57:52,920 - TaskMenu - [INFO] - Finished monitoring PsychoPyMgr_stdout_pid33311.
+2025-05-26 22:57:52,939 - TaskMenu - [INFO] - PsychoPy Display Manager (PID: 33311) terminated with code: -2.
+2025-05-26 22:57:52,939 - TaskMenu - [INFO] - PsychoPy Display Manager process object (formerly PID: 33311) set to None.
+2025-05-26 22:57:52,940 - TaskMenu - [INFO] - Finished waiting for/cleaning up sent_ei.py process.
+2025-05-26 22:57:52,940 - TaskMenu - [INFO] - Sending command to PsychoPyDisplayManager to stop E/I task display...
+2025-05-26 22:57:52,940 - TaskMenu - [WARNING] - PsychoPy process not ready to receive command. Details: process object is None. Command not sent: {'action': 'stop_ei_task'}
+2025-05-26 22:57:52,940 - TaskMenu - [INFO] - Application exited normally.
